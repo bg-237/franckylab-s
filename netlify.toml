@@ -28,6 +28,27 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000"
 
+# Redirections pour les projets
+[[redirects]]
+  from = "/projet1"
+  to = "/projet1/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/projet2"
+  to = "/projet2/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/projet3"
+  to = "/projet3/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/projet4"
+  to = "/projet4/index.html"
+  status = 200
+
 [[redirects]]
   from = "/admin/*"
   to = "/404.html"

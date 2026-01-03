@@ -475,47 +475,23 @@ function checkFontAwesome() {
     // Si Font Awesome n'est pas chargé, ajouter une classe fallback
     if (!content || content === 'none' || content === '""') {
         document.body.classList.add('no-fontawesome');
-        console.warn('Font Awesome non chargé, utilisation des emojis de fallback');
+        console.warn('Font Awesome non chargé, utilisation des icônes custom');
         
-        // Remplacer les icônes par des emojis
-        replaceFontAwesomeWithEmojis();
+        // Utiliser les icônes custom
+        replaceFontAwesomeWithCustomIcons();
     }
 }
 
-// Remplacer les icônes Font Awesome par des emojis
-function replaceFontAwesomeWithEmojis() {
-    const iconMap = {
-        'fa-globe': '🌐',
-        'fa-cogs': '⚙️',
-        'fa-robot': '🤖',
-        'fa-magic': '✨',
-        'fa-tools': '🔧',
-        'fa-rocket': '🚀',
-        'fa-lightbulb': '💡',
-        'fa-handshake': '🤝',
-        'fa-award': '🏆',
-        'fa-map-marker-alt': '📍',
-        'fa-phone': '📞',
-        'fa-envelope': '📧',
-        'fa-clock': '🕐',
-        'fa-paper-plane': '✈️',
-        'fa-whatsapp': '📱',
-        'fa-facebook-f': '📘',
-        'fa-star': '⭐',
-        'fa-check-circle': '✅',
-        'fa-exclamation-circle': '⚠️',
-        'fa-spinner': '⏳'
-    };
-    
-    // Parcourir toutes les icônes et les remplacer
-    Object.keys(iconMap).forEach(iconClass => {
-        const elements = document.querySelectorAll(`.${iconClass}`);
-        elements.forEach(element => {
-            element.innerHTML = iconMap[iconClass];
-            element.style.fontFamily = 'Arial, sans-serif';
-            element.style.fontSize = '1.2em';
-        });
-    });
+// Remplacer les icônes Font Awesome par des icônes custom
+function replaceFontAwesomeWithCustomIcons() {
+    // Utiliser notre système d'icônes custom
+    if (typeof franckyIcons !== 'undefined') {
+        franckyIcons.replaceFontAwesome();
+        console.log('Icônes custom Francky Lab\'s chargées avec succès');
+    } else {
+        console.warn('Système d\'icônes custom non disponible, utilisation des emojis de fallback');
+        replaceFontAwesomeWithEmojis();
+    }
 }
 
 // Vérifier Font Awesome après le chargement de la page
