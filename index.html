@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Francky Lab's - Agence digitale camerounaise spécialisée dans la création de sites web, logiciels de gestion, chatbots et automatisation. Accompagnement digital à Yaoundé.">
+    <meta name="keywords" content="création site web, logiciel gestion, chatbot, automatisation, digitalisation, Yaoundé, Cameroun">
+    <meta name="author" content="Francky Lab's">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Francky Lab's - Votre Partenaire Digital au Cameroun">
+    <meta property="og:description" content="Spécialistes en création de sites web, logiciels personnalisés et automatisation. Digitalisez votre entreprise avec Francky Lab's.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://francky-labs.netlify.app">
+    
+    <title>Francky Lab's - Agence Digitale Premium | Yaoundé, Cameroun</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#00d4ff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Francky Lab's</h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#apropos" class="nav-link">À Propos</a></li>
+                <li><a href="#realisations" class="nav-link">Réalisations</a></li>
+                <li><a href="#temoignages" class="nav-link">Témoignages</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-background">
+            <canvas id="hero-canvas"></canvas>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Nous créons des 
+                    <span class="typing-text" id="typing-text"></span>
+                </h1>
+                <p class="hero-subtitle">
+                    Votre partenaire digital au Cameroun pour transformer vos idées en solutions technologiques innovantes
+                </p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary">Découvrir nos services</a>
+                    <a href="#contact" class="btn btn-secondary">Nous contacter</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nos Services</h2>
+                <p class="section-subtitle">Des solutions digitales complètes pour votre entreprise</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Sites Web Professionnels</h3>
+                    <p>Création de sites web modernes, responsives et optimisés SEO pour renforcer votre présence en ligne et attirer plus de clients.</p>
+                    <ul class="service-features">
+                        <li>Design moderne et responsive</li>
+                        <li>Optimisation SEO avancée</li>
+                        <li>Performance et sécurité</li>
+                    </ul>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Logiciels de Gestion</h3>
+                    <p>Développement de logiciels personnalisés pour optimiser vos processus métier et améliorer votre productivité.</p>
+                    <ul class="service-features">
+                        <li>Solutions sur mesure</li>
+                        <li>Interface intuitive</li>
+                        <li>Formation et support</li>
+                    </ul>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Chatbots Intelligents</h3>
+                    <p>Création de chatbots pour réseaux sociaux afin d'automatiser votre service client et améliorer l'engagement.</p>
+                    <ul class="service-features">
+                        <li>Réponses automatisées 24/7</li>
+                        <li>Intégration multi-plateformes</li>
+                        <li>Analytics détaillées</li>
+                    </ul>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>Automatisation</h3>
+                    <p>Automatisation de vos tâches répétitives pour vous faire gagner du temps et réduire les erreurs humaines.</p>
+                    <ul class="service-features">
+                        <li>Processus optimisés</li>
+                        <li>Gain de temps considérable</li>
+                        <li>Réduction des erreurs</li>
+                    </ul>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Webmaster</h3>
+                    <p>Maintenance et gestion complète de votre site web pour assurer sa performance et sa sécurité optimales.</p>
+                    <ul class="service-features">
+                        <li>Maintenance préventive</li>
+                        <li>Mises à jour sécurisées</li>
+                        <li>Support technique</li>
+                    </ul>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Accompagnement Digital</h3>
+                    <p>Stratégie digitale complète pour transformer votre entreprise et la propulser vers le succès numérique.</p>
+                    <ul class="service-features">
+                        <li>Audit digital complet</li>
+                        <li>Stratégie personnalisée</li>
+                        <li>Formation équipes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="apropos" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h2 class="section-title">À Propos de Francky Lab's</h2>
+                    <p class="about-description">
+                        Basée à Yaoundé Jouvence, Francky Lab's est une agence digitale camerounaise spécialisée dans la transformation numérique des entreprises. Nous combinons créativité, innovation et expertise technique pour créer des solutions digitales qui propulsent votre business vers le succès.
+                    </p>
+                    <p class="about-description">
+                        Notre mission est d'accompagner les entreprises camerounaises dans leur digitalisation en proposant des solutions technologiques modernes, performantes et adaptées aux réalités locales.
+                    </p>
+                    
+                    <div class="about-values">
+                        <div class="value-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>Innovation</h4>
+                            <p>Solutions créatives et technologies de pointe</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-handshake"></i>
+                            <h4>Partenariat</h4>
+                            <p>Accompagnement personnalisé et durable</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-award"></i>
+                            <h4>Excellence</h4>
+                            <p>Qualité et performance dans chaque projet</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-stats" data-aos="fade-left">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="50">0</div>
+                        <div class="stat-label">Projets Réalisés</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="30">0</div>
+                        <div class="stat-label">Clients Satisfaits</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="3">0</div>
+                        <div class="stat-label">Années d'Expérience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="24">0</div>
+                        <div class="stat-label">Support 24/7</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Réalisations Section -->
+    <section id="realisations" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nos Réalisations</h2>
+                <p class="section-subtitle">Découvrez quelques-uns de nos projets les plus remarquables</p>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="portfolio-image">
+                        <img src="assets/lucid.png" alt="Logiciel de gestion" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Logiciel de gestion commerciale</h3>
+                                <p>Logiciel de gestion commerciale avec gestion de stock, facturation, comptabilité</p>
+                                <div class="portfolio-tags">
+                                    <span>facturation</span>
+                                    <span>gestion stock</span>
+                                    <span><a href="https://lucidflow.netlify.app/">voir une démo</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="portfolio-image">
+                        <img src="assets/pureblack.png" alt="site vitrine" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3> Site web vitrine</h3>
+                                <p>site web vitrine pour une boutique de produits cosmétiques de la place</p>
+                                <div class="portfolio-tags">
+                                    <span>design</span>
+                                    <span>responsive</span>
+                                    <span><a href="">voir une démo</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="portfolio-image">
+                        <img src="assets/dentes.png" alt="site web" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Site web moderne</h3>
+                                <p>Site vitrine d'un cabinet de soins dentaire de la place</p>
+                                <div class="portfolio-tags">
+                                    <span>design</span>
+                                    <span>responsive</span>
+                                    <span><a href="">voir une démo</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="portfolio-image">
+                        <img src="assets/plc.png" alt="site web" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Site web moderne</h3>
+                                <p>Site vitrine d'une pharmacie de la place</p>
+                                <div class="portfolio-tags">
+                                    <span>design</span>
+                                    <span>responsive</span>
+                                    <span><a href="">voir une démo</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="portfolio-image">
+                        <img src="assets/pixelx.png" alt="site web" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Site web moderne</h3>
+                                <p>Site vitrine d'une agence de photographie de la place</p>
+                                <div class="portfolio-tags">
+                                    <span>design</span>
+                                    <span>responsive</span>
+                                    <span><a href="">voir une démo</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="portfolio-image">
+                        <img src="assets/hp_page1.png" alt="site vitrine" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3> Site web vitrine</h3>
+                                <p>site web vitrine pour une boutique de produits cosmétiques de la place</p>
+                                <div class="portfolio-tags">
+                                    <span>design</span>
+                                    <span>responsive</span>
+                                    <span><a href="">voir une démo</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages Section -->
+    <section id="temoignages" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Ce que disent nos clients</h2>
+                <p class="section-subtitle">La satisfaction client au cœur de notre mission</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-item active" data-aos="fade-up">
+                    <div class="testimonial-content">
+                        <div class="testimonial-text">
+                            "Francky Lab's a transformé notre présence digitale. Leur expertise technique et leur compréhension du marché camerounais nous ont permis d'augmenter nos ventes de 150%."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Marie Nguema</h4>
+                                <p>Directrice, Boutique Fashion CM</p>
+                            </div>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-item" data-aos="fade-up">
+                    <div class="testimonial-content">
+                        <div class="testimonial-text">
+                            "Le logiciel de gestion développé par Francky Lab's a révolutionné notre façon de travailler. Interface intuitive, fonctionnalités complètes et support exceptionnel."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Paul Mbarga</h4>
+                                <p>CEO, TechStart Cameroun</p>
+                            </div>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-item" data-aos="fade-up">
+                    <div class="testimonial-content">
+                        <div class="testimonial-text">
+                            "Grâce au chatbot WhatsApp de Francky Lab's, nous répondons maintenant à nos clients 24h/24. Notre taux de satisfaction client a considérablement augmenté."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Fatima Alhadji</h4>
+                                <p>Responsable Marketing, EcoShop</p>
+                            </div>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-nav">
+                <button class="testimonial-btn active" data-slide="0"></button>
+                <button class="testimonial-btn" data-slide="1"></button>
+                <button class="testimonial-btn" data-slide="2"></button>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contactez-nous</h2>
+                <p class="section-subtitle">Prêt à digitaliser votre entreprise ? Parlons de votre projet</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Adresse</h4>
+                            <p>Yaoundé Jouvence<br>Cameroun</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Téléphone</h4>
+                            <p>+237 688 090 632</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>contact@francky-labs.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Horaires</h4>
+                            <p>Lun - Ven: 8h - 18h<br>Sam: 9h - 15h</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contact-form" data-aos="fade-left" netlify>
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Nom complet</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone">
+                        <label for="phone">Téléphone</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <select id="service" name="service" required>
+                            <option value="">Sélectionnez un service</option>
+                            <option value="site-web">Site Web</option>
+                            <option value="logiciel">Logiciel de Gestion</option>
+                            <option value="chatbot">Chatbot</option>
+                            <option value="automatisation">Automatisation</option>
+                            <option value="webmaster">Service Webmaster</option>
+                            <option value="accompagnement">Accompagnement Digital</option>
+                        </select>
+                        <label for="service">Service souhaité</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message">Décrivez votre projet</label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <span>Envoyer le message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Francky Lab's</h3>
+                    <p>Votre partenaire digital au Cameroun pour transformer vos idées en solutions technologiques innovantes.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/237688090632" target="_blank" class="social-link whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://facebook.com/francky-labs" target="_blank" class="social-link facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Sites Web</a></li>
+                        <li><a href="#services">Logiciels de Gestion</a></li>
+                        <li><a href="#services">Chatbots</a></li>
+                        <li><a href="#services">Automatisation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Entreprise</h4>
+                    <ul>
+                        <li><a href="#apropos">À Propos</a></li>
+                        <li><a href="#realisations">Réalisations</a></li>
+                        <li><a href="#temoignages">Témoignages</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Yaoundé Jouvence, Cameroun</p>
+                    <p><i class="fas fa-envelope"></i> contact@francky-labs.com</p>
+                    <p><i class="fas fa-phone"></i> +237 688 090 632</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Francky Lab's. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/237688090632" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Francky Lab's",
+        "description": "Agence digitale camerounaise spécialisée dans la création de sites web, logiciels de gestion, chatbots et automatisation",
+        "url": "https://francky-labs.netlify.app",
+        "logo": "https://francky-labs.netlify.app/assets/logo.png",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Yaoundé Jouvence",
+            "addressLocality": "Yaoundé",
+            "addressCountry": "CM"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+237-688-090-632",
+            "contactType": "customer service",
+            "availableLanguage": ["French"]
+        },
+        "sameAs": [
+            "https://facebook.com/francky-labs",
+            "https://wa.me/237688090632"
+        ],
+        "services": [
+            "Création de sites web",
+            "Développement de logiciels",
+            "Chatbots",
+            "Automatisation",
+            "Service webmaster",
+            "Accompagnement digital"
+        ]
+    }
+    </script>
+</body>
+</html>

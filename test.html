@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Francky Lab's</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .success { border-left: 4px solid #10b981; }
+        .warning { border-left: 4px solid #f59e0b; }
+        .info { border-left: 4px solid #3b82f6; }
+        h1 { color: #1f2937; text-align: center; }
+        h2 { color: #374151; }
+        code { background: #f3f4f6; padding: 2px 6px; border-radius: 4px; }
+        .checklist { list-style: none; padding: 0; }
+        .checklist li { padding: 8px 0; }
+        .checklist li:before { content: "✅ "; }
+    </style>
+</head>
+<body>
+    <h1>🧪 Test du Site Francky Lab's</h1>
+    
+    <div class="test-section success">
+        <h2>✅ Fichiers Créés</h2>
+        <ul class="checklist">
+            <li><code>index.html</code> - Page principale avec toutes les sections</li>
+            <li><code>css/style.css</code> - Styles modernes avec animations</li>
+            <li><code>js/main.js</code> - JavaScript interactif</li>
+            <li><code>js/config.js</code> - Configuration EmailJS</li>
+            <li><code>netlify.toml</code> - Configuration Netlify</li>
+            <li><code>manifest.json</code> - PWA manifest</li>
+        </ul>
+    </div>
+    
+    <div class="test-section info">
+        <h2>🎨 Fonctionnalités Implémentées</h2>
+        <ul class="checklist">
+            <li>Design dark/cyan moderne avec glassmorphism</li>
+            <li>Hero section avec animation typing</li>
+            <li>Background 3D avec particules Canvas</li>
+            <li>6 sections de services détaillées</li>
+            <li>Section à propos avec statistiques animées</li>
+            <li>Galerie de réalisations avec overlays</li>
+            <li>Slider de témoignages automatique</li>
+            <li>Formulaire de contact Netlify + EmailJS</li>
+            <li>Navigation responsive avec menu hamburger</li>
+            <li>Boutons WhatsApp et Facebook flottants</li>
+            <li>SEO optimisé avec structured data</li>
+            <li>100% responsive design</li>
+        </ul>
+    </div>
+    
+    <div class="test-section warning">
+        <h2>⚙️ Configuration Requise</h2>
+        <p><strong>Pour activer EmailJS :</strong></p>
+        <ol>
+            <li>Créer un compte sur <a href="https://www.emailjs.com/" target="_blank">EmailJS</a></li>
+            <li>Configurer un service email (Gmail, Outlook, etc.)</li>
+            <li>Créer un template avec les variables du formulaire</li>
+            <li>Remplacer les valeurs dans <code>js/config.js</code></li>
+            <li>Décommenter le code EmailJS dans <code>js/main.js</code></li>
+        </ol>
+        
+        <p><strong>Pour personnaliser :</strong></p>
+        <ul>
+            <li>Remplacer les numéros de téléphone et emails</li>
+            <li>Ajouter vos propres images dans <code>assets/</code></li>
+            <li>Modifier les couleurs dans les variables CSS</li>
+            <li>Personnaliser le contenu des sections</li>
+        </ul>
+    </div>
+    
+    <div class="test-section info">
+        <h2>🚀 Déploiement</h2>
+        <p><strong>Netlify (Recommandé) :</strong></p>
+        <ol>
+            <li>Connecter votre repository GitHub à Netlify</li>
+            <li>La configuration <code>netlify.toml</code> sera automatiquement détectée</li>
+            <li>Les formulaires Netlify fonctionneront immédiatement</li>
+            <li>HTTPS et CDN activés automatiquement</li>
+        </ol>
+        
+        <p><strong>Autres options :</strong> Vercel, GitHub Pages, Firebase Hosting</p>
+    </div>
+    
+    <div class="test-section success">
+        <h2>📱 Test Responsive</h2>
+        <p>Le site s'adapte automatiquement à tous les écrans :</p>
+        <ul>
+            <li><strong>Desktop</strong> (1200px+) - Layout complet</li>
+            <li><strong>Tablet</strong> (768px-1024px) - Grilles adaptées</li>
+            <li><strong>Mobile</strong> (320px-768px) - Menu hamburger</li>
+        </ul>
+        <p>Testez en redimensionnant votre navigateur ou avec les outils développeur (F12).</p>
+    </div>
+    
+    <div style="text-align: center; margin: 40px 0;">
+        <a href="index.html" style="background: #00d4ff; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold;">
+            🌟 Voir le Site Francky Lab's
+        </a>
+    </div>
+</body>
+</html>

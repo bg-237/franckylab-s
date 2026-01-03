@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pure Black - Boutique de cosmétiques de luxe à Yaoundé. Découvrez notre sélection exclusive de produits de beauté haut de gamme : fond de teint, crèmes, huiles, maquillage et plus.">
+    <meta name="keywords" content="cosmétiques luxe, beauté Yaoundé, produits beauté, maquillage luxe, Pure Black, cosmétiques Cameroun">
+    <meta name="author" content="Pure Black">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Pure Black - Cosmétiques de Luxe à Yaoundé">
+    <meta property="og:description" content="Votre destination pour les produits de beauté de luxe à Yaoundé">
+    <meta property="og:type" content="website">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BeautyBusiness",
+        "name": "Pure Black",
+        "description": "Boutique de cosmétiques de luxe",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Quartier Jouvence, à côté de la banque UBA",
+            "addressLocality": "Yaoundé",
+            "addressCountry": "CM"
+        }
+    }
+    </script>
+    
+    <title>Pure Black - Cosmétiques de Luxe | Yaoundé</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Canvas pour les pétales de roses -->
+    <canvas id="petals-canvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">PURE BLACK</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="#apropos" class="nav-link">À Propos</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title stroke-text reveal-up">PURE BLACK</h1>
+            <p class="hero-subtitle reveal-up delay-1">L'Excellence en Cosmétiques de Luxe</p>
+            <p class="hero-description reveal-up delay-2">Découvrez notre collection exclusive de produits de beauté haut de gamme</p>
+            <a href="#contact" class="cta-button reveal-up delay-3">Nous Contacter</a>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Section À Propos -->
+    <section id="apropos" class="about">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <h2 class="section-title stroke-text">À Propos</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text reveal-left">
+                    <h3>Votre Destination Beauté de Luxe</h3>
+                    <p>Pure Black est votre référence en matière de cosmétiques de luxe à Yaoundé. Nous sommes spécialisés dans la vente et la redistribution de produits de beauté haut de gamme soigneusement sélectionnés.</p>
+                    <p>Notre mission est de vous offrir une expérience beauté exceptionnelle avec des produits d'excellence qui subliment votre beauté naturelle.</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">✨</span>
+                            <span>Produits Premium</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🎯</span>
+                            <span>Sélection Exclusive</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">💎</span>
+                            <span>Qualité Garantie</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image reveal-right">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&q=80" alt="Produits cosmétiques de luxe Pure Black" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Services -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <h2 class="section-title stroke-text">Nos Services</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal-up delay-1">
+                    <div class="service-icon">💄</div>
+                    <h3>Maquillage</h3>
+                    <p>Une gamme complète de produits de maquillage haut de gamme pour sublimer votre beauté</p>
+                </div>
+                <div class="service-card reveal-up delay-2">
+                    <div class="service-icon">🧴</div>
+                    <h3>Soins de la Peau</h3>
+                    <p>Crèmes, huiles, laits et lotions premium pour une peau éclatante et nourrie</p>
+                </div>
+                <div class="service-card reveal-up delay-3">
+                    <div class="service-icon">🧼</div>
+                    <h3>Hygiène Luxe</h3>
+                    <p>Savons et produits d'hygiène raffinés pour un rituel beauté quotidien</p>
+                </div>
+                <div class="service-card reveal-up delay-4">
+                    <div class="service-icon">💅</div>
+                    <h3>Soins des Ongles</h3>
+                    <p>Produits professionnels pour des ongles impeccables et soignés</p>
+                </div>
+                <div class="service-card reveal-up delay-5">
+                    <div class="service-icon">👸</div>
+                    <h3>Perruques Premium</h3>
+                    <p>Collection exclusive de perruques de qualité supérieure</p>
+                </div>
+                <div class="service-card reveal-up delay-6">
+                    <div class="service-icon">✨</div>
+                    <h3>Fond de Teint</h3>
+                    <p>Teints parfaits adaptés à toutes les carnations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Galerie -->
+    <section class="gallery">
+        <div class="gallery-grid">
+            <div class="gallery-item reveal-scale">
+                <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&q=80" alt="Cosmétiques de luxe" loading="lazy">
+            </div>
+            <div class="gallery-item reveal-scale delay-1">
+                <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600&q=80" alt="Produits de beauté" loading="lazy">
+            </div>
+            <div class="gallery-item reveal-scale delay-2">
+                <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80" alt="Maquillage premium" loading="lazy">
+            </div>
+            <div class="gallery-item reveal-scale delay-3">
+                <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600&q=80" alt="Soins de la peau" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <h2 class="section-title stroke-text">Contactez-Nous</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info reveal-left">
+                    <h3>Visitez-Nous</h3>
+                    <div class="info-item">
+                        <span class="info-icon">📍</span>
+                        <div>
+                            <h4>Adresse</h4>
+                            <p>Quartier Jouvence, à côté de la banque UBA<br>Yaoundé, Cameroun</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">📞</span>
+                        <div>
+                            <h4>Téléphone</h4>
+                            <p>+237 XXX XXX XXX</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">✉️</span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contact@pureblack.cm</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">⏰</span>
+                        <div>
+                            <h4>Horaires</h4>
+                            <p>Lundi - Samedi: 9h00 - 19h00<br>Dimanche: Fermé</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper reveal-right">
+                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form" netlify>
+                        <input type="hidden" name="form-name" value="contact">
+                        <p class="hidden">
+                            <label>Ne pas remplir: <input name="bot-field"></label>
+                        </p>
+                        <div class="form-group">
+                            <input type="text" name="name" id="name" required>
+                            <label for="name">Nom Complet</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" required>
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" id="phone">
+                            <label for="phone">Téléphone</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="message" rows="5" required></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <button type="submit" class="submit-button">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">PURE BLACK</span>
+                    <p>L'Excellence en Cosmétiques de Luxe</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#accueil">Accueil</a>
+                    <a href="#apropos">À Propos</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pure Black. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/petals.js"></script>
+</body>
+</html>
