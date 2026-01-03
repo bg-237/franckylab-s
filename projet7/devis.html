@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demander un Devis - Madame L'assureur</title>
+    <meta name="description" content="Obtenez votre devis d'assurance personnalisé gratuitement - Madame L'assureur, Yaoundé, Cameroun">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="../js/icons.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Madame L'assureur</h2>
+                <span class="logo-subtitle">Votre Protection</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="about.html" class="nav-link">À Propos</a></li>
+                <li><a href="devis.html" class="nav-link active">Devis</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Demander un Devis</h1>
+                <p>Obtenez votre devis personnalisé en quelques minutes</p>
+                <nav class="breadcrumb">
+                    <a href="index.html">Accueil</a>
+                    <span>/</span>
+                    <span>Devis</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Form Section -->
+    <section class="quote-section">
+        <div class="container">
+            <div class="quote-content">
+                <div class="quote-intro">
+                    <div class="intro-text">
+                        <h2>Votre Devis Gratuit en 3 Étapes</h2>
+                        <p>Remplissez notre formulaire simple et recevez votre devis personnalisé immédiatement</p>
+                        
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-text">
+                                    <h4>Choisissez votre assurance</h4>
+                                    <p>Sélectionnez le type d'assurance qui vous intéresse</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-text">
+                                    <h4>Renseignez vos informations</h4>
+                                    <p>Complétez le formulaire avec vos données</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-text">
+                                    <h4>Recevez votre devis</h4>
+                                    <p>Obtenez votre devis personnalisé instantanément</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro-image">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Calculatrice et documents">
+                    </div>
+                </div>
+
+                <!-- Quote Form -->
+                <div class="quote-form-container">
+                    <form class="quote-form" id="quoteForm">
+                        <div class="form-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span id="progressText">Étape 1 sur 3</span>
+                            </div>
+                        </div>
+
+                        <!-- Étape 1: Type d'assurance -->
+                        <div class="form-step active" id="step1">
+                            <h3>Quel type d'assurance vous intéresse ?</h3>
+                            <div class="insurance-types">
+                                <div class="insurance-type" data-type="sante">
+                                    <div class="type-icon">
+                                        <i class="fas fa-heartbeat"></i>
+                                    </div>
+                                    <h4>Assurance Santé</h4>
+                                    <p>Protection médicale complète</p>
+                                </div>
+                                <div class="insurance-type" data-type="vehicule">
+                                    <div class="type-icon">
+                                        <i class="fas fa-car"></i>
+                                    </div>
+                                    <h4>Assurance Véhicule</h4>
+                                    <p>Couverture automobile</p>
+                                </div>
+                                <div class="insurance-type" data-type="habitation">
+                                    <div class="type-icon">
+                                        <i class="fas fa-home"></i>
+                                    </div>
+                                    <h4>Assurance Habitation</h4>
+                                    <p>Protection de votre foyer</p>
+                                </div>
+                                <div class="insurance-type" data-type="famille">
+                                    <div class="type-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h4>Assurance Famille</h4>
+                                    <p>Sécurité familiale globale</p>
+                                </div>
+                                <div class="insurance-type" data-type="professionnel">
+                                    <div class="type-icon">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
+                                    <h4>Assurance Professionnelle</h4>
+                                    <p>Solutions business</p>
+                                </div>
+                            </div>
+                            <input type="hidden" name="insuranceType" id="insuranceType" required>
+                        </div>
+
+                        <!-- Étape 2: Informations personnelles -->
+                        <div class="form-step" id="step2">
+                            <h3>Vos informations personnelles</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="firstName">Prénom *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                    <div class="error-message"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Nom *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                    <div class="error-message"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" required>
+                                    <div class="error-message"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Téléphone *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                    <div class="error-message"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="age">Âge</label>
+                                    <select id="age" name="age">
+                                        <option value="">Sélectionnez votre âge</option>
+                                        <option value="18-25">18-25 ans</option>
+                                        <option value="26-35">26-35 ans</option>
+                                        <option value="36-45">36-45 ans</option>
+                                        <option value="46-55">46-55 ans</option>
+                                        <option value="56-65">56-65 ans</option>
+                                        <option value="65+">Plus de 65 ans</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">Ville</label>
+                                    <input type="text" id="city" name="city" placeholder="Ex: Yaoundé">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Étape 3: Détails spécifiques -->
+                        <div class="form-step" id="step3">
+                            <h3>Détails de votre demande</h3>
+                            
+                            <!-- Détails Santé -->
+                            <div class="specific-details" id="santeDetails" style="display: none;">
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="familySize">Nombre de personnes à couvrir</label>
+                                        <select id="familySize" name="familySize">
+                                            <option value="1">1 personne</option>
+                                            <option value="2">2 personnes</option>
+                                            <option value="3">3 personnes</option>
+                                            <option value="4">4 personnes</option>
+                                            <option value="5+">5 personnes ou plus</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="healthBudget">Budget mensuel souhaité</label>
+                                        <select id="healthBudget" name="healthBudget">
+                                            <option value="20000-30000">20,000 - 30,000 FCFA</option>
+                                            <option value="30000-50000">30,000 - 50,000 FCFA</option>
+                                            <option value="50000-75000">50,000 - 75,000 FCFA</option>
+                                            <option value="75000+">Plus de 75,000 FCFA</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Détails Véhicule -->
+                            <div class="specific-details" id="vehiculeDetails" style="display: none;">
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="vehicleType">Type de véhicule</label>
+                                        <select id="vehicleType" name="vehicleType">
+                                            <option value="voiture">Voiture particulière</option>
+                                            <option value="moto">Moto/Scooter</option>
+                                            <option value="utilitaire">Véhicule utilitaire</option>
+                                            <option value="camion">Camion</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="vehicleValue">Valeur du véhicule</label>
+                                        <select id="vehicleValue" name="vehicleValue">
+                                            <option value="0-2000000">Moins de 2,000,000 FCFA</option>
+                                            <option value="2000000-5000000">2,000,000 - 5,000,000 FCFA</option>
+                                            <option value="5000000-10000000">5,000,000 - 10,000,000 FCFA</option>
+                                            <option value="10000000+">Plus de 10,000,000 FCFA</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Détails Habitation -->
+                            <div class="specific-details" id="habitationDetails" style="display: none;">
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="propertyType">Type de logement</label>
+                                        <select id="propertyType" name="propertyType">
+                                            <option value="appartement">Appartement</option>
+                                            <option value="maison">Maison individuelle</option>
+                                            <option value="villa">Villa</option>
+                                            <option value="studio">Studio</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="propertyValue">Valeur du bien</label>
+                                        <select id="propertyValue" name="propertyValue">
+                                            <option value="0-10000000">Moins de 10,000,000 FCFA</option>
+                                            <option value="10000000-25000000">10,000,000 - 25,000,000 FCFA</option>
+                                            <option value="25000000-50000000">25,000,000 - 50,000,000 FCFA</option>
+                                            <option value="50000000+">Plus de 50,000,000 FCFA</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="form-group full-width">
+                                <label for="message">Message ou demandes spécifiques</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Décrivez vos besoins spécifiques ou posez vos questions..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Navigation buttons -->
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-secondary" id="prevBtn" style="display: none;">
+                                <i class="fas fa-arrow-left"></i>
+                                Précédent
+                            </button>
+                            <button type="button" class="btn btn-primary" id="nextBtn">
+                                Suivant
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                            <button type="submit" class="btn btn-primary" id="submitBtn" style="display: none;">
+                                <i class="fas fa-paper-plane"></i>
+                                Obtenir mon Devis
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Result -->
+    <div class="quote-result" id="quoteResult" style="display: none;">
+        <div class="container">
+            <div class="result-content">
+                <div class="result-header">
+                    <i class="fas fa-check-circle"></i>
+                    <h2>Votre Devis Personnalisé</h2>
+                    <p>Merci pour votre demande ! Voici une estimation de votre prime d'assurance.</p>
+                </div>
+                
+                <div class="result-details">
+                    <div class="result-card">
+                        <h3>Détails de votre devis</h3>
+                        <div class="detail-item">
+                            <span class="label">Type d'assurance :</span>
+                            <span class="value" id="resultType"></span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Prime mensuelle estimée :</span>
+                            <span class="value price" id="resultPrice"></span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Couverture :</span>
+                            <span class="value" id="resultCoverage"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="result-actions">
+                        <h4>Prochaines étapes</h4>
+                        <p>Un de nos conseillers vous contactera dans les 24h pour finaliser votre devis et répondre à vos questions.</p>
+                        <div class="action-buttons">
+                            <a href="contact.html" class="btn btn-primary">
+                                <i class="fas fa-phone"></i>
+                                Nous Contacter
+                            </a>
+                            <button type="button" class="btn btn-secondary" onclick="window.print()">
+                                <i class="fas fa-print"></i>
+                                Imprimer le Devis
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-quote">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Pourquoi Demander un Devis chez Nous ?</h2>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h4>Devis Instantané</h4>
+                    <p>Obtenez votre estimation en quelques minutes seulement</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h4>100% Gratuit</h4>
+                    <p>Aucun frais, aucun engagement pour votre devis</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h4>Conseiller Dédié</h4>
+                    <p>Un expert vous accompagne dans vos choix</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-check"></i>
+                    </div>
+                    <h4>Sans Engagement</h4>
+                    <p>Vous êtes libre de votre décision</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Madame L'assureur</h3>
+                    <p>Votre partenaire de confiance pour tous vos besoins d'assurance au Cameroun.</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Mbankolo, Yaoundé, Cameroun</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+237 682 986 035</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#sante">Assurance Santé</a></li>
+                        <li><a href="services.html#vehicule">Assurance Véhicule</a></li>
+                        <li><a href="services.html#habitation">Assurance Habitation</a></li>
+                        <li><a href="services.html#famille">Assurance Famille</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Utiles</h4>
+                    <ul>
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="devis.html">Demander un Devis</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Madame L'assureur. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../js/icons.js"></script>
+    <script src="js/fix-icons.js"></script>
+    <script src="js/floating-buttons.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/quote.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Boutons Flottants - Madame L'assureur</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 2rem;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+        }
+        .test-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .test-section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: #f8fafc;
+            border-radius: 12px;
+        }
+        .scroll-content {
+            height: 200vh;
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-content">
+        <h1>Test des Boutons Flottants</h1>
+        
+        <div class="test-section">
+            <h2>🔧 Test des Fonctionnalités</h2>
+            <p><strong>Bouton WhatsApp :</strong> Doit apparaître en bas à gauche avec une animation de pulsation verte.</p>
+            <p><strong>Bouton Scroll-to-top :</strong> Doit apparaître en bas à droite quand vous scrollez vers le bas.</p>
+        </div>
+        
+        <div class="test-section">
+            <h2>📱 Numéro WhatsApp</h2>
+            <p><strong>+237 682 986 035</strong></p>
+            <p>Message pré-rempli : "Bonjour Madame L'assureur, j'aimerais avoir des informations sur vos services d'assurance."</p>
+        </div>
+        
+        <div class="test-section">
+            <h2>🎨 Styles Appliqués</h2>
+            <ul>
+                <li>✅ Icônes SVG custom (pas de Font Awesome)</li>
+                <li>✅ Animation de pulsation WhatsApp</li>
+                <li>✅ Tooltips au survol (desktop)</li>
+                <li>✅ Responsive design</li>
+                <li>✅ Transitions fluides</li>
+            </ul>
+        </div>
+        
+        <div class="test-section">
+            <h2>📋 Instructions de Test</h2>
+            <ol>
+                <li><strong>Scrollez vers le bas</strong> pour voir apparaître le bouton "Retour en haut"</li>
+                <li><strong>Cliquez sur le bouton WhatsApp</strong> pour tester le lien (s'ouvre dans un nouvel onglet)</li>
+                <li><strong>Cliquez sur le bouton "Retour en haut"</strong> pour remonter automatiquement</li>
+                <li><strong>Survolez les boutons</strong> pour voir les tooltips (sur desktop)</li>
+                <li><strong>Testez sur mobile</strong> pour vérifier la responsivité</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="scroll-content">
+        <div>
+            <h2>Zone de Test du Scroll</h2>
+            <p>Scrollez vers le bas pour voir le bouton "Retour en haut" apparaître</p>
+            <p>Le bouton WhatsApp reste toujours visible</p>
+        </div>
+    </div>
+    
+    <script src="../js/icons.js"></script>
+    <script src="js/fix-icons.js"></script>
+    <script src="js/floating-buttons.js"></script>
+    
+    <script>
+        // Script de test pour vérifier le bon fonctionnement
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('=== TEST DES BOUTONS FLOTTANTS ===');
+            
+            // Vérifier la présence des boutons
+            setTimeout(() => {
+                const whatsappBtn = document.querySelector('.whatsapp-btn');
+                const scrollBtn = document.querySelector('.scroll-to-top');
+                
+                console.log('Bouton WhatsApp trouvé:', !!whatsappBtn);
+                console.log('Bouton Scroll-to-top trouvé:', !!scrollBtn);
+                
+                if (whatsappBtn) {
+                    console.log('URL WhatsApp:', whatsappBtn.href);
+                    console.log('Icône WhatsApp présente:', !!whatsappBtn.querySelector('svg'));
+                }
+                
+                if (scrollBtn) {
+                    console.log('Icône Scroll présente:', !!scrollBtn.querySelector('svg'));
+                }
+                
+                // Test du scroll
+                window.addEventListener('scroll', () => {
+                    const scrollTop = window.pageYOffset;
+                    console.log('Scroll position:', scrollTop);
+                    
+                    if (scrollBtn) {
+                        const isVisible = scrollBtn.classList.contains('show');
+                        console.log('Bouton scroll visible:', isVisible);
+                    }
+                });
+                
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

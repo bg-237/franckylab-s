@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Madame L'assureur</title>
+    <meta name="description" content="Contactez Madame L'assureur à Mbankolo, Yaoundé - Téléphone: +237 682 986 035. Votre partenaire assurance au Cameroun">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="../js/icons.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Madame L'assureur</h2>
+                <span class="logo-subtitle">Votre Protection</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="about.html" class="nav-link">À Propos</a></li>
+                <li><a href="devis.html" class="nav-link">Devis</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Contactez-Nous</h1>
+                <p>Nous sommes là pour répondre à toutes vos questions</p>
+                <nav class="breadcrumb">
+                    <a href="index.html">Accueil</a>
+                    <span>/</span>
+                    <span>Contact</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="section-badge">
+                        <i class="fas fa-phone"></i>
+                        <span>Nos Coordonnées</span>
+                    </div>
+                    <h2>Parlons de Votre Protection</h2>
+                    <p>Notre équipe d'experts est à votre disposition pour vous conseiller et vous accompagner dans le choix de vos assurances.</p>
+
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="card-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Notre Adresse</h4>
+                                <p>Mbankolo<br>Yaoundé, Cameroun</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="card-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Téléphone</h4>
+                                <p><a href="tel:+237682986035">+237 682 986 035</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="card-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Email</h4>
+                                <p><a href="mailto:contact@madamelassureur.cm">contact@madamelassureur.cm</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="card-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Horaires d'Ouverture</h4>
+                                <p>Lun - Ven: 8h00 - 18h00<br>Sam: 8h00 - 14h00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="emergency-contact">
+                        <div class="emergency-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="emergency-text">
+                            <h4>Urgence 24/7</h4>
+                            <p>En cas d'urgence, contactez-nous à tout moment</p>
+                            <a href="tel:+237682986035" class="emergency-phone">+237 682 986 035</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <h3>Envoyez-nous un Message</h3>
+                        <p>Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="contactFirstName">Prénom *</label>
+                                <input type="text" id="contactFirstName" name="firstName" required>
+                                <div class="error-message"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactLastName">Nom *</label>
+                                <input type="text" id="contactLastName" name="lastName" required>
+                                <div class="error-message"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactEmail">Email *</label>
+                                <input type="email" id="contactEmail" name="email" required>
+                                <div class="error-message"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactPhone">Téléphone</label>
+                                <input type="tel" id="contactPhone" name="phone">
+                                <div class="error-message"></div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="contactSubject">Sujet *</label>
+                                <select id="contactSubject" name="subject" required>
+                                    <option value="">Choisissez un sujet</option>
+                                    <option value="devis">Demande de devis</option>
+                                    <option value="sinistre">Déclaration de sinistre</option>
+                                    <option value="information">Demande d'information</option>
+                                    <option value="reclamation">Réclamation</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                                <div class="error-message"></div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="contactMessage">Message *</label>
+                                <textarea id="contactMessage" name="message" rows="6" placeholder="Décrivez votre demande en détail..." required></textarea>
+                                <div class="error-message"></div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="contactConsent" name="consent" required>
+                                    <label for="contactConsent">J'accepte que mes données soient utilisées pour me recontacter concernant ma demande *</label>
+                                </div>
+                                <div class="error-message"></div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Envoyer le Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nous Trouver</h2>
+                <p class="section-subtitle">Rendez-nous visite dans nos bureaux à Mbankolo, Yaoundé</p>
+            </div>
+            
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <div class="map-content">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Madame L'assureur</h4>
+                        <p>Mbankolo, Yaoundé<br>Cameroun</p>
+                        <a href="https://maps.google.com/?q=Mbankolo,Yaoundé,Cameroun" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-directions"></i>
+                            Obtenir l'Itinéraire
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="map-info">
+                    <h3>Comment Nous Rejoindre</h3>
+                    <div class="directions">
+                        <div class="direction-item">
+                            <i class="fas fa-car"></i>
+                            <div>
+                                <h4>En Voiture</h4>
+                                <p>Parking gratuit disponible devant nos bureaux</p>
+                            </div>
+                        </div>
+                        <div class="direction-item">
+                            <i class="fas fa-bus"></i>
+                            <div>
+                                <h4>En Transport Public</h4>
+                                <p>Arrêt de bus à 200m de nos bureaux</p>
+                            </div>
+                        </div>
+                        <div class="direction-item">
+                            <i class="fas fa-motorcycle"></i>
+                            <div>
+                                <h4>En Moto-Taxi</h4>
+                                <p>Point de rassemblement des motos-taxis à proximité</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="office-features">
+                        <h4>Nos Équipements</h4>
+                        <ul>
+                            <li><i class="fas fa-wifi"></i> WiFi gratuit</li>
+                            <li><i class="fas fa-coffee"></i> Espace détente</li>
+                            <li><i class="fas fa-wheelchair"></i> Accès handicapés</li>
+                            <li><i class="fas fa-shield-alt"></i> Sécurité 24/7</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Questions Fréquentes</h2>
+                <p class="section-subtitle">Trouvez rapidement les réponses à vos questions</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Comment obtenir un devis rapidement ?</h4>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Vous pouvez obtenir un devis en ligne en quelques minutes via notre formulaire de devis, ou nous contacter directement par téléphone. Nos conseillers vous répondront dans les 24h.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Quels documents faut-il pour souscrire une assurance ?</h4>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Les documents requis varient selon le type d'assurance. Généralement : pièce d'identité, justificatif de domicile, et documents spécifiques (carte grise pour véhicule, acte de propriété pour habitation, etc.).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Comment déclarer un sinistre ?</h4>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Contactez-nous immédiatement au +237 682 986 035. Vous pouvez aussi nous envoyer un email avec les détails du sinistre. Notre équipe vous guidera dans toutes les démarches.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Quels sont vos délais de remboursement ?</h4>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nous nous engageons à traiter vos dossiers de remboursement dans un délai maximum de 15 jours ouvrables après réception de tous les documents nécessaires.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Proposez-vous des facilités de paiement ?</h4>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oui, nous proposons plusieurs options de paiement : mensuel, trimestriel, semestriel ou annuel. Des réductions sont accordées pour les paiements annuels.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Une Question ? Contactez-Nous !</h2>
+                <p>Notre équipe d'experts est prête à vous aider à trouver la meilleure solution d'assurance</p>
+                <div class="cta-buttons">
+                    <a href="tel:+237682986035" class="btn btn-primary">
+                        <i class="fas fa-phone"></i>
+                        Appeler Maintenant
+                    </a>
+                    <a href="devis.html" class="btn btn-outline">
+                        <i class="fas fa-calculator"></i>
+                        Demander un Devis
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Madame L'assureur</h3>
+                    <p>Votre partenaire de confiance pour tous vos besoins d'assurance au Cameroun.</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Mbankolo, Yaoundé, Cameroun</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+237 682 986 035</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#sante">Assurance Santé</a></li>
+                        <li><a href="services.html#vehicule">Assurance Véhicule</a></li>
+                        <li><a href="services.html#habitation">Assurance Habitation</a></li>
+                        <li><a href="services.html#famille">Assurance Famille</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Utiles</h4>
+                    <ul>
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="devis.html">Demander un Devis</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Madame L'assureur. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../js/icons.js"></script>
+    <script src="js/fix-icons.js"></script>
+    <script src="js/floating-buttons.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>
