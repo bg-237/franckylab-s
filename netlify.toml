@@ -60,6 +60,11 @@
   status = 200
 
 [[redirects]]
+  from = "/projet7"
+  to = "/projet7/index.html"
+  status = 200
+
+[[redirects]]
   from = "/projet6"
   to = "/projet6/index.html"
   status = 200
