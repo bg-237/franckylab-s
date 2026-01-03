@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanceMax - Solutions de Microfinance Innovantes</title>
+    
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Bouton de retour vers le site principal -->
+    <a href="/" class="back-to-main" title="Retour au site Francky Lab's">
+        <i class="fas fa-arrow-left"></i>
+        <span>Francky Lab's</span>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg viewBox="0 0 24 24" fill="currentColor" style="width: 28px; height: 28px; color: var(--primary-color);">
+                    <path d="M5 12C5 13.11 3.89 14 2.5 14S0 13.11 0 12S1.39 10 2.5 10S5 10.89 5 12M7 12C7 10.89 8.39 10 10 10S13 10.89 13 12S11.61 14 10 14S7 13.11 7 12M14 12C14 10.89 15.39 10 17 10S20 10.89 20 12S18.61 14 17 14S14 13.11 14 12M21 12C21 13.11 19.61 14 18 14S15 13.11 15 12S16.39 10 18 10S21 10.89 21 12Z"/>
+                </svg>
+                <span>FinanceMax</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Accueil</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="simulator.html" class="nav-link">Simulateur</a></li>
+                <li><a href="about.html" class="nav-link">À propos</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="client-space.html" class="nav-link btn-primary">Espace Client</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Votre partenaire financier de confiance</h1>
+                <p class="hero-subtitle">Solutions de microfinance innovantes pour particuliers et entreprises. Prêts rapides, taux compétitifs, service personnalisé.</p>
+                <div class="hero-buttons">
+                    <a href="simulator.html" class="btn btn-primary">Simuler un prêt</a>
+                    <a href="services.html" class="btn btn-secondary">Nos services</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">15K+</span>
+                        <span class="stat-label">Clients satisfaits</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Taux d'approbation</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24h</span>
+                        <span class="stat-label">Réponse rapide</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Finance moderne">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="container">
+            <h2 class="section-title">Nos solutions financières</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" style="width: 32px; height: 32px; color: white;">
+                            <path d="M11.8 10.9C10.5 10.9 9.4 11.3 9.4 11.9S10.5 12.8 11.8 12.8S14.2 12.4 14.2 11.9S13.1 10.9 11.8 10.9M12 2A10 10 0 0 0 2 12A10 10 0 0 0 12 22A10 10 0 0 0 22 12A10 10 0 0 0 12 2M11.8 6.2C14.2 6.2 16.2 7.7 16.7 9.8L15.1 10.3C14.8 9.1 13.5 8.2 11.8 8.2C10.1 8.2 8.8 9.1 8.5 10.3L6.9 9.8C7.4 7.7 9.4 6.2 11.8 6.2M11.8 17.8C9.4 17.8 7.4 16.3 6.9 14.2L8.5 13.7C8.8 14.9 10.1 15.8 11.8 15.8C13.5 15.8 14.8 14.9 15.1 13.7L16.7 14.2C16.2 16.3 14.2 17.8 11.8 17.8Z"/>
+                        </svg>
+                    </div>
+                    <h3>Prêts personnels</h3>
+                    <p>Financez vos projets personnels avec des conditions avantageuses et un processus simplifié.</p>
+                    <a href="services.html" class="service-link">En savoir plus <svg viewBox="0 0 24 24" fill="currentColor" style="width: 1em; height: 1em; display: inline-block; vertical-align: middle;">
+                        <path d="M4 11V13H16L10.5 18.5L11.92 19.92L19.84 12L11.92 4.08L10.5 5.5L16 11H4Z"/>
+                    </svg></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" style="width: 32px; height: 32px; color: white;">
+                            <path d="M2 20H22V22H2V20M4 2H20V20H4V2M6 4V18H18V4H6M8 6H10V8H8V6M12 6H14V8H12V6M16 6H18V8H16V6M8 10H10V12H8V10M12 10H14V12H12V10M16 10H18V12H16V10M8 14H10V16H8V14M12 14H14V16H12V14M16 14H18V16H16V14Z"/>
+                        </svg>
+                    </div>
+                    <h3>Crédit entreprise</h3>
+                    <p>Développez votre activité avec nos solutions de financement adaptées aux PME.</p>
+                    <a href="services.html" class="service-link">En savoir plus <svg viewBox="0 0 24 24" fill="currentColor" style="width: 1em; height: 1em; display: inline-block; vertical-align: middle;">
+                        <path d="M4 11V13H16L10.5 18.5L11.92 19.92L19.84 12L11.92 4.08L10.5 5.5L16 11H4Z"/>
+                    </svg></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" style="width: 32px; height: 32px; color: white;">
+                            <path d="M10 20V14H14V20H19V12H22L12 3L2 12H5V20H10Z"/>
+                        </svg>
+                    </div>
+                    <h3>Prêt immobilier</h3>
+                    <p>Concrétisez votre projet immobilier avec nos taux préférentiels.</p>
+                    <a href="services.html" class="service-link">En savoir plus <svg viewBox="0 0 24 24" fill="currentColor" style="width: 1em; height: 1em; display: inline-block; vertical-align: middle;">
+                        <path d="M4 11V13H16L10.5 18.5L11.92 19.92L19.84 12L11.92 4.08L10.5 5.5L16 11H4Z"/>
+                    </svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="why-content">
+                <div class="why-text">
+                    <h2>Pourquoi choisir FinanceMax ?</h2>
+                    <div class="features">
+                        <div class="feature">
+                            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px; color: var(--primary-color); background: var(--white); padding: 12px; border-radius: 12px; box-shadow: var(--shadow-sm); flex-shrink: 0;">
+                                <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1M12 7C13.4 7 14.8 8.6 14.8 10.5V11.5C15.4 11.5 16 12.4 16 13V16C16 17.1 15.1 18 14 18H10C8.9 18 8 17.1 8 16V13C8 12.4 8.4 11.5 9 11.5V10.5C9 8.6 10.6 7 12 7M12 8.2C11.2 8.2 10.2 8.7 10.2 10.5V11.5H13.8V10.5C13.8 8.7 12.8 8.2 12 8.2Z"/>
+                            </svg>
+                            <div>
+                                <h4>Sécurité garantie</h4>
+                                <p>Vos données sont protégées par les plus hauts standards de sécurité bancaire.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px; color: var(--primary-color); background: var(--white); padding: 12px; border-radius: 12px; box-shadow: var(--shadow-sm); flex-shrink: 0;">
+                                <path d="M12 2A10 10 0 0 0 2 12A10 10 0 0 0 12 22A10 10 0 0 0 22 12A10 10 0 0 0 12 2M16.2 16.2L11 13V7H12.5V12.2L17 14.7L16.2 16.2Z"/>
+                            </svg>
+                            <div>
+                                <h4>Réponse rapide</h4>
+                                <p>Obtenez une réponse de principe en moins de 24h pour votre demande de prêt.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px; color: var(--primary-color); background: var(--white); padding: 12px; border-radius: 12px; box-shadow: var(--shadow-sm); flex-shrink: 0;">
+                                <path d="M12 4A4 4 0 0 1 16 8A4 4 0 0 1 12 12A4 4 0 0 1 8 8A4 4 0 0 1 12 4M12 14C16.42 14 20 15.79 20 18V20H4V18C4 15.79 7.58 14 12 14M12 15L10 17L12 19L14 17L12 15Z"/>
+                            </svg>
+                            <div>
+                                <h4>Accompagnement personnalisé</h4>
+                                <p>Un conseiller dédié vous accompagne tout au long de votre projet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="why-image">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1926&q=80" alt="Équipe professionnelle">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Prêt à concrétiser vos projets ?</h2>
+                <p>Utilisez notre simulateur en ligne pour obtenir une estimation personnalisée en quelques clics.</p>
+                <a href="simulator.html" class="btn btn-primary btn-large">Simuler mon prêt</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <svg viewBox="0 0 24 24" fill="currentColor" style="width: 28px; height: 28px; color: var(--primary-color);">
+                            <path d="M5 12C5 13.11 3.89 14 2.5 14S0 13.11 0 12S1.39 10 2.5 10S5 10.89 5 12M7 12C7 10.89 8.39 10 10 10S13 10.89 13 12S11.61 14 10 14S7 13.11 7 12M14 12C14 10.89 15.39 10 17 10S20 10.89 20 12S18.61 14 17 14S14 13.11 14 12M21 12C21 13.11 19.61 14 18 14S15 13.11 15 12S16.39 10 18 10S21 10.89 21 12Z"/>
+                        </svg>
+                        <span>FinanceMax</span>
+                    </div>
+                    <p>Votre partenaire de confiance pour tous vos besoins financiers.</p>
+                    <div class="social-links">
+                        <a href="#"><svg viewBox="0 0 24 24" fill="currentColor" style="width: 20px; height: 20px;">
+                            <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24V15.563H7.078V12.073H10.125V9.405C10.125 6.348 11.917 4.688 14.658 4.688C15.97 4.688 17.344 4.922 17.344 4.922V7.875H15.83C14.34 7.875 13.875 8.8 13.875 9.75V12.073H17.203L16.671 15.563H13.875V24C19.612 23.094 24 18.1 24 12.073Z"/>
+                        </svg></a>
+                        <a href="#"><svg viewBox="0 0 24 24" fill="currentColor" style="width: 20px; height: 20px;">
+                            <path d="M22.46 6C21.69 6.35 20.86 6.58 20 6.69C20.88 6.16 21.56 5.32 21.88 4.31C21.05 4.81 20.13 5.16 19.16 5.36C18.37 4.5 17.26 4 16 4C13.65 4 11.73 5.92 11.73 8.29C11.73 8.63 11.77 8.96 11.84 9.27C8.28 9.09 5.11 7.38 3 4.79C2.63 5.42 2.42 6.16 2.42 6.94C2.42 8.43 3.17 9.75 4.33 10.5C3.62 10.5 2.96 10.3 2.38 10C2.38 10 2.38 10 2.38 10.03C2.38 12.11 3.86 13.85 5.82 14.24C5.46 14.34 5.08 14.39 4.69 14.39C4.42 14.39 4.15 14.36 3.89 14.31C4.43 16 6 17.26 7.89 17.29C6.43 18.45 4.58 19.13 2.56 19.13C2.22 19.13 1.88 19.11 1.54 19.07C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79C20.33 8.6 20.33 8.42 20.32 8.23C21.16 7.63 21.88 6.87 22.46 6Z"/>
+                        </svg></a>
+                        <a href="#"><svg viewBox="0 0 24 24" fill="currentColor" style="width: 20px; height: 20px;">
+                            <path d="M20.447 20.452H16.893V14.883C16.893 13.555 16.866 11.846 15.041 11.846C13.188 11.846 12.905 13.291 12.905 14.785V20.452H9.351V9H12.765V10.561H12.811C13.288 9.661 14.448 8.711 16.181 8.711C19.782 8.711 20.448 11.081 20.448 14.166V20.452H20.447ZM5.337 7.433A2.062 2.062 0 0 1 3.274 5.371A2.064 2.064 0 0 1 5.337 3.309A2.064 2.064 0 0 1 7.4 5.371A2.063 2.063 0 0 1 5.337 7.433ZM7.119 20.452H3.555V9H7.119V20.452ZM22.225 0H1.771C0.792 0 0 0.774 0 1.729V22.271C0 23.227 0.792 24 1.771 24H22.222C23.2 24 24 23.227 24 22.271V1.729C24 0.774 23.2 0 22.222 0H22.225Z"/>
+                        </svg></a>
+                        <a href="#"><svg viewBox="0 0 24 24" fill="currentColor" style="width: 20px; height: 20px;">
+                            <path d="M7.8 2H16.2C19.4 2 22 4.6 22 7.8V16.2A5.8 5.8 0 0 1 16.2 22H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2M7.6 4A3.6 3.6 0 0 0 4 7.6V16.4C4 18.39 5.61 20 7.6 20H16.4A3.6 3.6 0 0 0 20 16.4V7.6C20 5.61 18.39 4 16.4 4H7.6M17.25 5.5A1.25 1.25 0 0 1 18.5 6.75A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75A1.25 1.25 0 0 1 17.25 5.5M12 7A5 5 0 0 1 17 12A5 5 0 0 1 12 17A5 5 0 0 1 7 12A5 5 0 0 1 12 7M12 9A3 3 0 0 0 9 12A3 3 0 0 0 12 15A3 3 0 0 0 15 12A3 3 0 0 0 12 9Z"/>
+                        </svg></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Prêts personnels</a></li>
+                        <li><a href="services.html">Crédit entreprise</a></li>
+                        <li><a href="services.html">Prêt immobilier</a></li>
+                        <li><a href="simulator.html">Simulateur</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Entreprise</h4>
+                    <ul>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Carrières</a></li>
+                        <li><a href="#">Presse</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <p><svg viewBox="0 0 24 24" fill="currentColor" style="width: 20px; height: 20px; color: var(--primary-color); margin-right: 12px;">
+                            <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5A1 1 0 0 1 21 16.5V20A1 1 0 0 1 20 21A17 17 0 0 1 3 4A1 1 0 0 1 4 3H7.5A1 1 0 0 1 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"/>
+                        </svg> +33 1 23 45 67 89</p>
+                        <p><svg viewBox="0 0 24 24" fill="currentColor" style="width: 20px; height: 20px; color: var(--primary-color); margin-right: 12px;">
+                            <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4M20 8L12 13L4 8V6L12 11L20 6V8Z"/>
+                        </svg> contact@financemax.fr</p>
+                        <p><svg viewBox="0 0 24 24" fill="currentColor" style="width: 20px; height: 20px; color: var(--primary-color); margin-right: 12px;">
+                            <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22S19 14.25 19 9C19 5.13 15.87 2 12 2M12 11.5C10.62 11.5 9.5 10.38 9.5 9S10.62 6.5 12 6.5S14.5 7.62 14.5 9S13.38 11.5 12 11.5Z"/>
+                        </svg> 123 Avenue des Champs-Élysées, Paris</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FinanceMax. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">CGU</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="../js/icons.js"></script>
+</body>
+</html>

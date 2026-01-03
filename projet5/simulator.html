@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulateur de Prêt - FinanceMax</title>
+    
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Bouton de retour vers le site principal -->
+    <a href="/" class="back-to-main" title="Retour au site Francky Lab's">
+        <i class="fas fa-arrow-left"></i>
+        <span>Francky Lab's</span>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-coins"></i>
+                <span>FinanceMax</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="simulator.html" class="nav-link active">Simulateur</a></li>
+                <li><a href="about.html" class="nav-link">À propos</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="client-space.html" class="nav-link btn-primary">Espace Client</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Simulateur de Prêt</h1>
+                <p>Obtenez une estimation personnalisée en quelques clics</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simulateur -->
+    <section class="simulator-section">
+        <div class="container">
+            <div class="simulator-container">
+                <!-- Formulaire de simulation -->
+                <div class="simulator-form">
+                    <div class="form-header">
+                        <h2>Paramètres de votre prêt</h2>
+                        <p>Ajustez les paramètres pour obtenir votre simulation</p>
+                    </div>
+
+                    <form id="loanSimulator">
+                        <!-- Type de prêt -->
+                        <div class="form-group">
+                            <label for="loanType">Type de prêt</label>
+                            <select id="loanType" name="loanType" required>
+                                <option value="personal">Prêt personnel</option>
+                                <option value="business">Crédit entreprise</option>
+                                <option value="mortgage">Prêt immobilier</option>
+                            </select>
+                        </div>
+
+                        <!-- Montant -->
+                        <div class="form-group">
+                            <label for="amount">Montant souhaité</label>
+                            <div class="input-with-slider">
+                                <input type="range" id="amountSlider" min="1000" max="500000" value="25000" step="1000">
+                                <input type="number" id="amount" name="amount" value="25000" min="1000" max="500000" step="1000">
+                                <span class="currency">€</span>
+                            </div>
+                        </div>
+
+                        <!-- Durée -->
+                        <div class="form-group">
+                            <label for="duration">Durée du prêt</label>
+                            <div class="input-with-slider">
+                                <input type="range" id="durationSlider" min="12" max="300" value="60" step="12">
+                                <input type="number" id="duration" name="duration" value="60" min="12" max="300" step="12">
+                                <span class="unit">mois</span>
+                            </div>
+                        </div>
+
+                        <!-- Revenus -->
+                        <div class="form-group">
+                            <label for="income">Revenus mensuels nets</label>
+                            <div class="input-wrapper">
+                                <input type="number" id="income" name="income" placeholder="3000" min="1000" step="100">
+                                <span class="currency">€</span>
+                            </div>
+                        </div>
+
+                        <!-- Situation professionnelle -->
+                        <div class="form-group">
+                            <label for="profession">Situation professionnelle</label>
+                            <select id="profession" name="profession" required>
+                                <option value="">Sélectionnez votre situation</option>
+                                <option value="employee">Salarié CDI</option>
+                                <option value="civil-servant">Fonctionnaire</option>
+                                <option value="freelance">Indépendant</option>
+                                <option value="retired">Retraité</option>
+                                <option value="student">Étudiant</option>
+                            </select>
+                        </div>
+
+                        <button type="button" id="calculateBtn" class="btn btn-primary btn-large">
+                            <i class="fas fa-calculator"></i>
+                            Calculer ma simulation
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Résultats -->
+                <div class="simulator-results">
+                    <div class="results-header">
+                        <h2>Votre simulation</h2>
+                        <div class="results-status" id="resultsStatus">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Remplissez le formulaire pour voir votre simulation</span>
+                        </div>
+                    </div>
+
+                    <div class="results-content" id="resultsContent">
+                        <!-- Résultats principaux -->
+                        <div class="result-card main-result">
+                            <div class="result-item">
+                                <span class="result-label">Mensualité</span>
+                                <span class="result-value" id="monthlyPayment">-</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Taux d'intérêt</span>
+                                <span class="result-value" id="interestRate">-</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Coût total</span>
+                                <span class="result-value" id="totalCost">-</span>
+                            </div>
+                        </div>
+
+                        <!-- Graphique de répartition -->
+                        <div class="result-card">
+                            <h3>Répartition du coût</h3>
+                            <div class="cost-breakdown">
+                                <div class="breakdown-item">
+                                    <div class="breakdown-bar">
+                                        <div class="bar-fill capital" id="capitalBar"></div>
+                                        <div class="bar-fill interest" id="interestBar"></div>
+                                    </div>
+                                    <div class="breakdown-legend">
+                                        <div class="legend-item">
+                                            <span class="legend-color capital"></span>
+                                            <span>Capital: <span id="capitalAmount">-</span></span>
+                                        </div>
+                                        <div class="legend-item">
+                                            <span class="legend-color interest"></span>
+                                            <span>Intérêts: <span id="interestAmount">-</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Capacité d'emprunt -->
+                        <div class="result-card">
+                            <h3>Analyse de votre profil</h3>
+                            <div class="profile-analysis">
+                                <div class="analysis-item">
+                                    <span class="analysis-label">Taux d'endettement</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" id="debtRatio"></div>
+                                    </div>
+                                    <span class="analysis-value" id="debtRatioValue">-</span>
+                                </div>
+                                <div class="analysis-item">
+                                    <span class="analysis-label">Reste à vivre</span>
+                                    <span class="analysis-value" id="remainingIncome">-</span>
+                                </div>
+                                <div class="feasibility-indicator" id="feasibilityIndicator">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Projet réalisable</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Actions -->
+                        <div class="results-actions">
+                            <button class="btn btn-primary" id="applyBtn">
+                                <i class="fas fa-file-alt"></i>
+                                Faire une demande
+                            </button>
+                            <button class="btn btn-secondary" id="saveBtn">
+                                <i class="fas fa-save"></i>
+                                Sauvegarder
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demande de prêt -->
+    <section class="loan-application" id="loanApplication" style="display: none;">
+        <div class="container">
+            <div class="application-container">
+                <div class="application-header">
+                    <h2>Demande de prêt</h2>
+                    <p>Complétez votre dossier pour finaliser votre demande</p>
+                </div>
+
+                <form id="loanApplicationForm" class="application-form">
+                    <!-- Informations personnelles -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-user"></i> Informations personnelles</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Prénom *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Nom *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Téléphone *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Adresse complète *</label>
+                            <textarea id="address" name="address" rows="3" required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Documents -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-file-upload"></i> Documents justificatifs</h3>
+                        <div class="upload-area">
+                            <div class="upload-item">
+                                <label for="idDocument">Pièce d'identité *</label>
+                                <div class="file-upload">
+                                    <input type="file" id="idDocument" name="idDocument" accept=".pdf,.jpg,.jpeg,.png" required>
+                                    <div class="upload-placeholder">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <span>Cliquez pour sélectionner ou glissez votre fichier</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="upload-item">
+                                <label for="incomeProof">Justificatif de revenus *</label>
+                                <div class="file-upload">
+                                    <input type="file" id="incomeProof" name="incomeProof" accept=".pdf,.jpg,.jpeg,.png" required>
+                                    <div class="upload-placeholder">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <span>Cliquez pour sélectionner ou glissez votre fichier</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="upload-item">
+                                <label for="bankStatement">Relevé bancaire</label>
+                                <div class="file-upload">
+                                    <input type="file" id="bankStatement" name="bankStatement" accept=".pdf,.jpg,.jpeg,.png">
+                                    <div class="upload-placeholder">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <span>Cliquez pour sélectionner ou glissez votre fichier</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Validation -->
+                    <div class="form-section">
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <span class="checkmark"></span>
+                                J'accepte les <a href="#" target="_blank">conditions générales</a> et la <a href="#" target="_blank">politique de confidentialité</a>
+                            </label>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                Je souhaite recevoir les offres et actualités de FinanceMax
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="backToSimulator">
+                            <i class="fas fa-arrow-left"></i>
+                            Retour au simulateur
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Envoyer ma demande
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-coins"></i>
+                        <span>FinanceMax</span>
+                    </div>
+                    <p>Votre partenaire de confiance pour tous vos besoins financiers.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Prêts personnels</a></li>
+                        <li><a href="services.html">Crédit entreprise</a></li>
+                        <li><a href="services.html">Prêt immobilier</a></li>
+                        <li><a href="simulator.html">Simulateur</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Entreprise</h4>
+                    <ul>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Carrières</a></li>
+                        <li><a href="#">Presse</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                        <p><i class="fas fa-envelope"></i> contact@financemax.fr</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Avenue des Champs-Élysées, Paris</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FinanceMax. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">CGU</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/simulator.js"></script>
+    <script src="../js/icons.js"></script>
+</body>
+</html>

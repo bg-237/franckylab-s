@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Client - FinanceMax</title>
+    
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Bouton de retour vers le site principal -->
+    <a href="/" class="back-to-main" title="Retour au site Francky Lab's">
+        <i class="fas fa-arrow-left"></i>
+        <span>Francky Lab's</span>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-coins"></i>
+                <span>FinanceMax</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="simulator.html" class="nav-link">Simulateur</a></li>
+                <li><a href="about.html" class="nav-link">À propos</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="client-space.html" class="nav-link btn-primary active">Espace Client</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="login-section" id="loginSection">
+        <div class="container">
+            <div class="login-container">
+                <div class="login-header">
+                    <div class="login-logo">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h1>Espace Client</h1>
+                    <p>Connectez-vous pour accéder à votre compte</p>
+                </div>
+
+                <div class="login-tabs">
+                    <button class="tab-btn active" data-tab="login">Connexion</button>
+                    <button class="tab-btn" data-tab="register">Inscription</button>
+                </div>
+
+                <!-- Formulaire de connexion -->
+                <form id="loginForm" class="auth-form active">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" name="email" placeholder="votre@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="loginPassword">Mot de passe</label>
+                        <div class="password-input">
+                            <input type="password" id="loginPassword" name="password" placeholder="••••••••" required>
+                            <button type="button" class="password-toggle" data-target="loginPassword">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="remember">
+                            <span class="checkmark"></span>
+                            Se souvenir de moi
+                        </label>
+                        <a href="#" class="forgot-link">Mot de passe oublié ?</a>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Se connecter
+                    </button>
+                </form>
+
+                <!-- Formulaire d'inscription -->
+                <form id="registerForm" class="auth-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="registerFirstName">Prénom</label>
+                            <input type="text" id="registerFirstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerLastName">Nom</label>
+                            <input type="text" id="registerLastName" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="registerEmail">Email</label>
+                        <input type="email" id="registerEmail" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="registerPhone">Téléphone</label>
+                        <input type="tel" id="registerPhone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="registerPassword">Mot de passe</label>
+                        <div class="password-input">
+                            <input type="password" id="registerPassword" name="password" required>
+                            <button type="button" class="password-toggle" data-target="registerPassword">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="password-strength">
+                            <div class="strength-bar">
+                                <div class="strength-fill"></div>
+                            </div>
+                            <span class="strength-text">Saisissez un mot de passe</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirmer le mot de passe</label>
+                        <div class="password-input">
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            <button type="button" class="password-toggle" data-target="confirmPassword">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="terms" required>
+                            <span class="checkmark"></span>
+                            J'accepte les <a href="#" target="_blank">conditions générales</a> et la <a href="#" target="_blank">politique de confidentialité</a>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <i class="fas fa-user-plus"></i>
+                        Créer mon compte
+                    </button>
+                </form>
+
+                <div class="login-footer">
+                    <p>Besoin d'aide ? <a href="contact.html">Contactez notre support</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section (masqué par défaut) -->
+    <section class="dashboard-section" id="dashboardSection" style="display: none;">
+        <div class="container">
+            <div class="dashboard-header">
+                <div class="welcome-message">
+                    <h1>Bonjour <span id="userName">Marie</span> !</h1>
+                    <p>Bienvenue dans votre espace client FinanceMax</p>
+                </div>
+                <button class="btn btn-secondary" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Déconnexion
+                </button>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Résumé du compte -->
+                <div class="dashboard-card account-summary">
+                    <div class="card-header">
+                        <h2><i class="fas fa-chart-line"></i> Résumé du compte</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="summary-item">
+                            <span class="summary-label">Prêts actifs</span>
+                            <span class="summary-value">2</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Montant total emprunté</span>
+                            <span class="summary-value">45 000 €</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Prochaine échéance</span>
+                            <span class="summary-value">15 Jan 2024</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Montant à payer</span>
+                            <span class="summary-value highlight">1 250 €</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mes prêts -->
+                <div class="dashboard-card loans-list">
+                    <div class="card-header">
+                        <h2><i class="fas fa-file-contract"></i> Mes prêts</h2>
+                        <a href="simulator.html" class="btn btn-primary btn-sm">Nouveau prêt</a>
+                    </div>
+                    <div class="card-content">
+                        <div class="loan-item">
+                            <div class="loan-info">
+                                <h3>Prêt Personnel #12345</h3>
+                                <p>Montant: 25 000 € • Durée: 60 mois</p>
+                            </div>
+                            <div class="loan-status">
+                                <span class="status-badge active">En cours</span>
+                                <span class="loan-progress">65% remboursé</span>
+                            </div>
+                        </div>
+                        <div class="loan-item">
+                            <div class="loan-info">
+                                <h3>Prêt Auto #12346</h3>
+                                <p>Montant: 20 000 € • Durée: 48 mois</p>
+                            </div>
+                            <div class="loan-status">
+                                <span class="status-badge active">En cours</span>
+                                <span class="loan-progress">30% remboursé</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Actions rapides -->
+                <div class="dashboard-card quick-actions">
+                    <div class="card-header">
+                        <h2><i class="fas fa-bolt"></i> Actions rapides</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="actions-grid">
+                            <button class="action-btn">
+                                <i class="fas fa-calculator"></i>
+                                <span>Simuler un prêt</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-file-download"></i>
+                                <span>Télécharger relevé</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Prendre RDV</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-headset"></i>
+                                <span>Contacter support</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dernières transactions -->
+                <div class="dashboard-card transactions">
+                    <div class="card-header">
+                        <h2><i class="fas fa-history"></i> Dernières transactions</h2>
+                        <a href="#" class="view-all">Voir tout</a>
+                    </div>
+                    <div class="card-content">
+                        <div class="transaction-item">
+                            <div class="transaction-info">
+                                <span class="transaction-type">Remboursement mensuel</span>
+                                <span class="transaction-date">15 Déc 2023</span>
+                            </div>
+                            <span class="transaction-amount debit">-1 250 €</span>
+                        </div>
+                        <div class="transaction-item">
+                            <div class="transaction-info">
+                                <span class="transaction-type">Déblocage prêt auto</span>
+                                <span class="transaction-date">01 Nov 2023</span>
+                            </div>
+                            <span class="transaction-amount credit">+20 000 €</span>
+                        </div>
+                        <div class="transaction-item">
+                            <div class="transaction-info">
+                                <span class="transaction-type">Remboursement mensuel</span>
+                                <span class="transaction-date">15 Nov 2023</span>
+                            </div>
+                            <span class="transaction-amount debit">-850 €</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-coins"></i>
+                        <span>FinanceMax</span>
+                    </div>
+                    <p>Votre partenaire de confiance pour tous vos besoins financiers.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Prêts personnels</a></li>
+                        <li><a href="services.html">Crédit entreprise</a></li>
+                        <li><a href="services.html">Prêt immobilier</a></li>
+                        <li><a href="simulator.html">Simulateur</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Entreprise</h4>
+                    <ul>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Carrières</a></li>
+                        <li><a href="#">Presse</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                        <p><i class="fas fa-envelope"></i> contact@financemax.fr</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Avenue des Champs-Élysées, Paris</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FinanceMax. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">CGU</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/client-space.js"></script>
+    <script src="../js/icons.js"></script>
+</body>
+</html>
