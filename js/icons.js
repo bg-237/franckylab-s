@@ -335,6 +335,43 @@ const FranckyIcons = {
     
     comments: `<svg viewBox="0 0 24 24" fill="currentColor">
         <path d="M12 23A1 1 0 0 1 11 22V19H7A2 2 0 0 1 5 17V7A2 2 0 0 1 7 5H21A2 2 0 0 1 23 7V17A2 2 0 0 1 21 19H16.9L13.2 22.71A1 1 0 0 1 12 23M13 17V20L16.08 17H21V7H7V17H13M3 15H1V3A2 2 0 0 1 3 1H19V3H3V15Z"/>
+    </svg>`,
+    
+    // Icônes juridiques spécifiques
+    scales: `<svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2M6.5 12.5L9.5 10.5L6.5 8.5L3.5 10.5L6.5 12.5M17.5 12.5L20.5 10.5L17.5 8.5L14.5 10.5L17.5 12.5M12 21L10.91 14.74L2 14L10.91 13.26L12 7L13.09 13.26L22 14L13.09 14.74L12 21Z"/>
+    </svg>`,
+    
+    gavel: `<svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M2.5 20.5L5.5 17.5L8.5 20.5L5.5 23.5L2.5 20.5M9.5 13.5L12.5 10.5L15.5 13.5L12.5 16.5L9.5 13.5M16.5 6.5L19.5 3.5L22.5 6.5L19.5 9.5L16.5 6.5M1 22H23V24H1V22Z"/>
+    </svg>`,
+    
+    briefcase: `<svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M10 2H14A2 2 0 0 1 16 4V6H20A2 2 0 0 1 22 8V19A2 2 0 0 1 20 21H4A2 2 0 0 1 2 19V8A2 2 0 0 1 4 6H8V4A2 2 0 0 1 10 2M14 6V4H10V6H14M4 8V19H20V8H4Z"/>
+    </svg>`,
+    
+    courthouse: `<svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M6.5 10H17.5V8.5L12 4.5L6.5 8.5V10M12 2L19 7V9H21V11H19V20H17V11H15V20H13V11H11V20H9V11H7V20H5V11H3V9H5V7L12 2M3 21V23H21V21H3Z"/>
+    </svg>`,
+    
+    handshakeAlt: `<svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M11 6H14L13.5 7.5H9.5L11 6M7 4V6H17V4C17 2.89 16.1 2 15 2H9C7.89 2 7 2.89 7 4M20 8H4C2.89 8 2 8.89 2 10V11H22V10C22 8.89 21.1 8 20 8M2 12V20C2 21.1 2.9 22 4 22H20C21.1 22 22 21.1 22 20V12H2Z"/>
+    </svg>`,
+    
+    ear: `<svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17 20C17 21.1 16.1 22 15 22H9C7.9 22 7 21.1 7 20V19H17V20M7 18V16H17V18H7M12 2C8.69 2 6 4.69 6 8C6 10.5 6.5 12.5 7 14H17C17.5 12.5 18 10.5 18 8C18 4.69 15.31 2 12 2M12 4C14.21 4 16 5.79 16 8C16 9.5 15.5 11 15 12H9C8.5 11 8 9.5 8 8C8 5.79 9.79 4 12 4Z"/>
+    </svg>`,
+    
+    target: `<svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2A10 10 0 0 0 2 12A10 10 0 0 0 12 22A10 10 0 0 0 22 12A10 10 0 0 0 12 2M12 4A8 8 0 0 1 20 12A8 8 0 0 1 12 20A8 8 0 0 1 4 12A8 8 0 0 1 12 4M12 6A6 6 0 0 0 6 12A6 6 0 0 0 12 18A6 6 0 0 0 18 12A6 6 0 0 0 12 6M12 8A4 4 0 0 1 16 12A4 4 0 0 1 12 16A4 4 0 0 1 8 12A4 4 0 0 1 12 8M12 10A2 2 0 0 0 10 12A2 2 0 0 0 12 14A2 2 0 0 0 14 12A2 2 0 0 0 12 10Z"/>
+    </svg>`,
+    
+    shield: `<svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1M12 7C13.4 7 14.8 8.6 14.8 10.5V11.5C15.4 11.5 16 12.4 16 13V16C16 17.1 15.1 18 14 18H10C8.9 18 8 17.1 8 16V13C8 12.4 8.4 11.5 9 11.5V10.5C9 8.6 10.6 7 12 7Z"/>
+    </svg>`,
+    
+    numbers: `<svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M7 1V3H5V5H7V7H9V5H11V3H9V1H7M3 9V11H5V13H3V15H9V13H7V11H9V9H3M11 9V15H13V11H15V15H17V9H11M3 17V19H5V21H7V19H9V17H3M13 17V21H19V19H15V17H13Z"/>
     </svg>`
 };
 
