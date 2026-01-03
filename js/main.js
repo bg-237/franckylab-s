@@ -455,3 +455,76 @@ function initLazyLoading() {
 
 // Initialiser le lazy loading
 initLazyLoading();
+
+// Vérification du chargement de Font Awesome
+function checkFontAwesome() {
+    // Créer un élément de test
+    const testElement = document.createElement('i');
+    testElement.className = 'fas fa-home';
+    testElement.style.position = 'absolute';
+    testElement.style.left = '-9999px';
+    document.body.appendChild(testElement);
+    
+    // Vérifier si Font Awesome est chargé
+    const computedStyle = window.getComputedStyle(testElement, ':before');
+    const content = computedStyle.getPropertyValue('content');
+    
+    // Nettoyer
+    document.body.removeChild(testElement);
+    
+    // Si Font Awesome n'est pas chargé, ajouter une classe fallback
+    if (!content || content === 'none' || content === '""') {
+        document.body.classList.add('no-fontawesome');
+        console.warn('Font Awesome non chargé, utilisation des emojis de fallback');
+        
+        // Remplacer les icônes par des emojis
+        replaceFontAwesomeWithEmojis();
+    }
+}
+
+// Remplacer les icônes Font Awesome par des emojis
+function replaceFontAwesomeWithEmojis() {
+    const iconMap = {
+        'fa-globe': '🌐',
+        'fa-cogs': '⚙️',
+        'fa-robot': '🤖',
+        'fa-magic': '✨',
+        'fa-tools': '🔧',
+        'fa-rocket': '🚀',
+        'fa-lightbulb': '💡',
+        'fa-handshake': '🤝',
+        'fa-award': '🏆',
+        'fa-map-marker-alt': '📍',
+        'fa-phone': '📞',
+        'fa-envelope': '📧',
+        'fa-clock': '🕐',
+        'fa-paper-plane': '✈️',
+        'fa-whatsapp': '📱',
+        'fa-facebook-f': '📘',
+        'fa-star': '⭐',
+        'fa-check-circle': '✅',
+        'fa-exclamation-circle': '⚠️',
+        'fa-spinner': '⏳'
+    };
+    
+    // Parcourir toutes les icônes et les remplacer
+    Object.keys(iconMap).forEach(iconClass => {
+        const elements = document.querySelectorAll(`.${iconClass}`);
+        elements.forEach(element => {
+            element.innerHTML = iconMap[iconClass];
+            element.style.fontFamily = 'Arial, sans-serif';
+            element.style.fontSize = '1.2em';
+        });
+    });
+}
+
+// Vérifier Font Awesome après le chargement de la page
+document.addEventListener('DOMContentLoaded', function() {
+    // Attendre un peu pour que Font Awesome se charge
+    setTimeout(checkFontAwesome, 1000);
+});
+
+// Vérifier aussi après le chargement complet
+window.addEventListener('load', function() {
+    setTimeout(checkFontAwesome, 500);
+});

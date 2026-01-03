@@ -1138,3 +1138,80 @@ body {
         right: 20px;
     }
 }
+/* Fallback pour les icônes si Font Awesome ne se charge pas */
+.fa-globe::before { content: "🌐"; }
+.fa-cogs::before { content: "⚙️"; }
+.fa-robot::before { content: "🤖"; }
+.fa-magic::before { content: "✨"; }
+.fa-tools::before { content: "🔧"; }
+.fa-rocket::before { content: "🚀"; }
+.fa-lightbulb::before { content: "💡"; }
+.fa-handshake::before { content: "🤝"; }
+.fa-award::before { content: "🏆"; }
+.fa-map-marker-alt::before { content: "📍"; }
+.fa-phone::before { content: "📞"; }
+.fa-envelope::before { content: "📧"; }
+.fa-clock::before { content: "🕐"; }
+.fa-paper-plane::before { content: "✈️"; }
+.fa-whatsapp::before { content: "📱"; }
+.fa-facebook-f::before { content: "📘"; }
+.fa-star::before { content: "⭐"; }
+.fa-check-circle::before { content: "✅"; }
+.fa-exclamation-circle::before { content: "⚠️"; }
+.fa-spinner::before { content: "⏳"; }
+
+/* S'assurer que les icônes s'affichent même sans Font Awesome */
+.fas, .fab, .far {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", Arial, sans-serif;
+    font-weight: 900;
+}
+
+.fab {
+    font-weight: 400;
+}
+
+/* Style de base pour les icônes de service */
+.service-icon i {
+    font-size: 2rem;
+    display: block;
+}
+
+/* Si Font Awesome ne charge pas, utiliser les emojis */
+@supports not (font-family: "Font Awesome 6 Free") {
+    .fas, .fab, .far {
+        font-family: Arial, sans-serif;
+    }
+}
+/* Styles pour le fallback sans Font Awesome */
+.no-fontawesome .fas,
+.no-fontawesome .fab,
+.no-fontawesome .far {
+    font-family: Arial, sans-serif !important;
+    font-weight: normal !important;
+    font-size: 1.2em;
+}
+
+.no-fontawesome .service-icon i {
+    font-size: 2.5rem !important;
+    line-height: 1;
+}
+
+.no-fontawesome .contact-icon i {
+    font-size: 1.5rem !important;
+}
+
+.no-fontawesome .social-link i {
+    font-size: 1.2rem !important;
+}
+
+.no-fontawesome .whatsapp-float i {
+    font-size: 1.8rem !important;
+}
+
+/* Améliorer l'affichage des emojis */
+.no-fontawesome i {
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
