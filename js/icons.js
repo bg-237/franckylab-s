@@ -204,6 +204,71 @@ const FranckyIcons = {
         <path d="M22.46 6C21.69 6.35 20.86 6.58 20 6.69C20.88 6.16 21.56 5.32 21.88 4.31C21.05 4.81 20.13 5.16 19.16 5.36C18.37 4.5 17.26 4 16 4C13.65 4 11.73 5.92 11.73 8.29C11.73 8.63 11.77 8.96 11.84 9.27C8.28 9.09 5.11 7.38 3 4.79C2.63 5.42 2.42 6.16 2.42 6.94C2.42 8.43 3.17 9.75 4.33 10.5C3.62 10.5 2.96 10.3 2.38 10C2.38 10 2.38 10 2.38 10.03C2.38 12.11 3.86 13.85 5.82 14.24C5.46 14.34 5.08 14.39 4.69 14.39C4.42 14.39 4.15 14.36 3.89 14.31C4.43 16 6 17.26 7.89 17.29C6.43 18.45 4.58 19.13 2.56 19.13C2.22 19.13 1.88 19.11 1.54 19.07C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79C20.33 8.6 20.33 8.42 20.32 8.23C21.16 7.63 21.88 6.87 22.46 6Z"/>
     </svg>`,
     
+    // Icônes financières manquantes
+    coins: `<svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M5 12C5 13.11 3.89 14 2.5 14S0 13.11 0 12S1.39 10 2.5 10S5 10.89 5 12M7 12C7 10.89 8.39 10 10 10S13 10.89 13 12S11.61 14 10 14S7 13.11 7 12M14 12C14 10.89 15.39 10 17 10S20 10.89 20 12S18.61 14 17 14S14 13.11 14 12M21 12C21 13.11 19.61 14 18 14S15 13.11 15 12S16.39 10 18 10S21 10.89 21 12Z"/>
+    </svg>`,
+    
+    userCircle: `<svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2A10 10 0 0 0 2 12A10 10 0 0 0 12 22A10 10 0 0 0 22 12A10 10 0 0 0 12 2M12 8.39C13.57 8.39 14.84 9.67 14.84 11.24C14.84 12.81 13.57 14.09 12 14.09C10.43 14.09 9.16 12.81 9.16 11.24C9.16 9.67 10.43 8.39 12 8.39M12 19.96C9.16 19.96 6.76 18.23 5.74 15.73C5.78 13.17 10.89 11.81 12 11.81C13.11 11.81 18.22 13.17 18.26 15.73C17.24 18.23 14.84 19.96 12 19.96Z"/>
+    </svg>`,
+    
+    eye: `<svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 9A3 3 0 0 0 9 12A3 3 0 0 0 12 15A3 3 0 0 0 15 12A3 3 0 0 0 12 9M12 17C9.24 17 7 14.76 7 12S9.24 7 12 7S17 9.24 17 12S14.76 17 12 17M12 4.5C7 4.5 2.73 7.61 1 12C2.73 16.39 7 19.5 12 19.5S21.27 16.39 23 12C21.27 7.61 17 4.5 12 4.5Z"/>
+    </svg>`,
+    
+    eyeSlash: `<svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M11.83 9L15 12.16C15 12.11 15 12.05 15 12A3 3 0 0 0 12 9C11.94 9 11.89 9 11.83 9M7.53 9.8L9.08 11.35C9.03 11.56 9 11.77 9 12A3 3 0 0 0 12 15C12.22 15 12.44 14.97 12.65 14.92L14.2 16.47C13.53 16.8 12.79 17 12 17C9.24 17 7 14.76 7 12C7 11.21 7.2 10.47 7.53 9.8M2 4.27L4.28 6.55L4.73 7C3.08 8.3 1.78 10 1 12C2.73 16.39 7 19.5 12 19.5C13.55 19.5 15.03 19.2 16.38 18.66L16.81 19.09L19.73 22L21 20.73L3.27 3M12 7A5 5 0 0 1 17 12C17 12.64 16.87 13.26 16.64 13.82L19.57 16.75C21.07 15.5 22.27 13.86 23 12C21.27 7.61 17 4.5 12 4.5C10.6 4.5 9.26 4.75 8 5.2L10.17 7.35C10.74 7.13 11.35 7 12 7Z"/>
+    </svg>`,
+    
+    signInAlt: `<svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M10 17.25V14H3V10H10V6.75L15.25 12L10 17.25M8 2H17A2 2 0 0 1 19 4V20A2 2 0 0 1 17 22H8C6.9 22 6 21.1 6 20V16H8V20H17V4H8V8H6V4A2 2 0 0 1 8 2Z"/>
+    </svg>`,
+    
+    userPlus: `<svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M15 14C12.33 14 7 15.33 7 18V20H23V18C23 15.33 17.67 14 15 14M6 10V7H4V10H1V12H4V15H6V12H9V10M15 12A4 4 0 0 0 19 8A4 4 0 0 0 15 4A4 4 0 0 0 11 8A4 4 0 0 0 15 12Z"/>
+    </svg>`,
+    
+    signOutAlt: `<svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M14.08 15.59L16.67 13H7V11H16.67L14.08 8.41L15.5 7L20.5 12L15.5 17L14.08 15.59M19 3A2 2 0 0 1 21 5V9.67L19 7.67V5H5V19H19V16.33L21 14.33V19A2 2 0 0 1 19 21H5C3.89 21 3 20.1 3 19V5C3 3.9 3.89 3 5 3H19Z"/>
+    </svg>`,
+    
+    chartLine: `<svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M16 6L18.29 8.29L13.41 13.17L9.41 9.17L2 16.59L3.41 18L9.41 12L13.41 16L19.71 9.71L22 12V6H16Z"/>
+    </svg>`,
+    
+    fileContract: `<svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M13 9H18.5L13 3.5V9M6 2H14L20 8V20A2 2 0 0 1 18 22H6C4.89 22 4 21.1 4 20V4C4 2.89 4.89 2 6 2M15 18V16H6V18H15M18 14V12H6V14H18Z"/>
+    </svg>`,
+    
+    bolt: `<svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M11 15H6L13 1V9H18L11 23V15Z"/>
+    </svg>`,
+    
+    calculator: `<svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M7 2H17A2 2 0 0 1 19 4V20A2 2 0 0 1 17 22H7A2 2 0 0 1 5 20V4A2 2 0 0 1 7 2M7 4V8H17V4H7M7 10V12H9V10H7M11 10V12H13V10H11M15 10V12H17V10H15M7 14V16H9V14H7M11 14V16H13V14H11M15 14V16H17V14H15M7 18V20H9V18H7M11 18V20H13V18H11M15 18V20H17V18H15Z"/>
+    </svg>`,
+    
+    fileDownload: `<svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M14 2H6A2 2 0 0 0 4 4V20A2 2 0 0 0 6 22H18A2 2 0 0 0 20 20V8L14 2M18 20H6V4H13V9H18V20Z"/>
+    </svg>`,
+    
+    calendarAlt: `<svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19 3H18V1H16V3H8V1H6V3H5A2 2 0 0 0 3 5V19A2 2 0 0 0 5 21H19A2 2 0 0 0 21 19V5A2 2 0 0 0 19 3M19 19H5V8H19V19M5 6V5H19V6H5Z"/>
+    </svg>`,
+    
+    headset: `<svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 1C7 1 3 5 3 10V17A3 3 0 0 0 6 20H9V12H5V10A7 7 0 0 1 12 3A7 7 0 0 1 19 10V12H15V20H18A3 3 0 0 0 21 17V10C21 5 17 1 12 1Z"/>
+    </svg>`,
+    
+    history: `<svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M13.5 8H12V13L16.28 15.54L17 14.33L13.5 12.25V8M13 3A9 9 0 0 0 4 12H1L4.96 16.03L9 12H6A7 7 0 0 1 13 5A7 7 0 0 1 20 12A7 7 0 0 1 13 19C11.07 19 9.32 18.21 8.06 16.94L6.64 18.36C8.27 20 10.5 21 13 21A9 9 0 0 0 22 12A9 9 0 0 0 13 3"/>
+    </svg>`,
+    
+    linkedin: `<svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20.447 20.452H16.893V14.883C16.893 13.555 16.866 11.846 15.041 11.846C13.188 11.846 12.905 13.291 12.905 14.785V20.452H9.351V9H12.765V10.561H12.811C13.288 9.661 14.448 8.711 16.181 8.711C19.782 8.711 20.448 11.081 20.448 14.166V20.452H20.447ZM5.337 7.433A2.062 2.062 0 0 1 3.274 5.371A2.064 2.064 0 0 1 5.337 3.309A2.064 2.064 0 0 1 7.4 5.371A2.063 2.063 0 0 1 5.337 7.433ZM7.119 20.452H3.555V9H7.119V20.452ZM22.225 0H1.771C0.792 0 0 0.774 0 1.729V22.271C0 23.227 0.792 24 1.771 24H22.222C23.2 24 24 23.227 24 22.271V1.729C24 0.774 23.2 0 22.222 0H22.225Z"/>
+    </svg>`,
+    
     // Icônes financières spécifiques
     coins: `<svg viewBox="0 0 24 24" fill="currentColor">
         <path d="M5 12C5 13.11 3.89 14 2.5 14S0 13.11 0 12S1.39 10 2.5 10S5 10.89 5 12M7 12C7 10.89 8.39 10 10 10S13 10.89 13 12S11.61 14 10 14S7 13.11 7 12M14 12C14 10.89 15.39 10 17 10S20 10.89 20 12S18.61 14 17 14S14 13.11 14 12M21 12C21 13.11 19.61 14 18 14S15 13.11 15 12S16.39 10 18 10S21 10.89 21 12Z"/>
@@ -484,6 +549,7 @@ class IconManager {
             'fa-arrow-right': 'arrowRight',
             'fa-whatsapp': 'whatsapp',
             'fa-facebook-f': 'facebook',
+            'fa-facebook': 'facebook',
             'fa-star': 'star',
             'fa-check-circle': 'checkCircle',
             'fa-exclamation-circle': 'exclamationCircle',
@@ -493,7 +559,26 @@ class IconManager {
             'fa-user': 'user',
             'fa-camera': 'camera',
             'fa-heart': 'heart',
-            'fa-check': 'check'
+            'fa-check': 'check',
+            // Icônes financières
+            'fa-coins': 'coins',
+            'fa-user-circle': 'userCircle',
+            'fa-eye': 'eye',
+            'fa-eye-slash': 'eyeSlash',
+            'fa-sign-in-alt': 'signInAlt',
+            'fa-user-plus': 'userPlus',
+            'fa-sign-out-alt': 'signOutAlt',
+            'fa-chart-line': 'chartLine',
+            'fa-file-contract': 'fileContract',
+            'fa-bolt': 'bolt',
+            'fa-calculator': 'calculator',
+            'fa-file-download': 'fileDownload',
+            'fa-calendar-alt': 'calendarAlt',
+            'fa-headset': 'headset',
+            'fa-history': 'history',
+            'fa-twitter': 'twitter',
+            'fa-linkedin': 'linkedin',
+            'fa-instagram': 'instagram'
         };
         
         // Mapping des emojis vers des icônes SVG
@@ -688,6 +773,47 @@ class IconManager {
     }
     
     /**
+     * Gérer les boutons avec toggle (comme les boutons de mot de passe)
+     */
+    handleToggleButtons() {
+        // Gérer les boutons de toggle de mot de passe
+        const toggleButtons = document.querySelectorAll('.password-toggle');
+        toggleButtons.forEach(button => {
+            const icon = button.querySelector('i');
+            if (icon && icon.classList.contains('fa-eye')) {
+                const newIcon = this.create('eye', {
+                    size: '16px',
+                    color: 'currentColor'
+                });
+                icon.parentNode.replaceChild(newIcon, icon);
+                
+                // Ajouter la fonctionnalité de toggle
+                button.addEventListener('click', () => {
+                    const targetId = button.dataset.target;
+                    const targetInput = document.getElementById(targetId);
+                    const currentIcon = button.querySelector('.francky-icon');
+                    
+                    if (targetInput.type === 'password') {
+                        targetInput.type = 'text';
+                        const eyeSlashIcon = this.create('eyeSlash', {
+                            size: '16px',
+                            color: 'currentColor'
+                        });
+                        button.replaceChild(eyeSlashIcon, currentIcon);
+                    } else {
+                        targetInput.type = 'password';
+                        const eyeIcon = this.create('eye', {
+                            size: '16px',
+                            color: 'currentColor'
+                        });
+                        button.replaceChild(eyeIcon, currentIcon);
+                    }
+                });
+            }
+        });
+    }
+    
+    /**
      * Initialiser le système d'icônes
      */
     init() {
@@ -696,10 +822,12 @@ class IconManager {
             document.addEventListener('DOMContentLoaded', () => {
                 this.replaceFontAwesome();
                 this.replaceProjectEmojis();
+                this.handleToggleButtons();
             });
         } else {
             this.replaceFontAwesome();
             this.replaceProjectEmojis();
+            this.handleToggleButtons();
         }
         
         // Ajouter les styles CSS pour les icônes
