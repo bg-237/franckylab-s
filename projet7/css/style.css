@@ -742,6 +742,7 @@ body {
         gap: 2rem;
         text-align: center;
         padding: 0 1rem;
+        padding-top: 6rem;
         max-width: 100%;
         overflow: hidden;
     }
@@ -877,6 +878,7 @@ body {
     /* Additional mobile fixes */
     .hero-content {
         padding: 0 0.5rem;
+        padding-top: 6rem;
     }
     
     .container {
