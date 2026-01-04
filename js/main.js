@@ -44,6 +44,13 @@ function initNavigation() {
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
+        
+        // Prevent body scroll when menu is open
+        if (navMenu.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
     });
 
     // Fermer le menu mobile au clic sur un lien
@@ -51,7 +58,28 @@ function initNavigation() {
         link.addEventListener('click', () => {
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
+            document.body.style.overflow = 'auto';
         });
+    });
+
+    // Fermer le menu mobile au clic en dehors
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+            if (navMenu.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+    });
+
+    // Fermer le menu mobile au redimensionnement
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
     });
 
     // Active link highlighting

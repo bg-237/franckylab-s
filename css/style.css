@@ -67,6 +67,8 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -75,6 +77,9 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+    position: relative;
 }
 
 /* Scrollbar personnalisée */
@@ -100,6 +105,8 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-lg);
+    width: 100%;
+    overflow: hidden;
 }
 
 .section-header {
@@ -239,6 +246,10 @@ body {
     flex-direction: column;
     cursor: pointer;
     gap: 4px;
+    z-index: 1002;
+    position: relative;
+    right: 0;
+    visibility: visible;
 }
 
 .hamburger span {
@@ -246,6 +257,18 @@ body {
     height: 3px;
     background: var(--text-primary);
     transition: all var(--transition-normal);
+}
+
+/* Ensure hamburger is visible on mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        z-index: 1002;
+        position: relative;
+        right: 0;
+    }
 }
 
 /* Hero Section */
@@ -256,6 +279,8 @@ body {
     justify-content: center;
     position: relative;
     overflow: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 .hero-background {
@@ -265,17 +290,21 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
+    overflow: hidden;
 }
 
 #hero-canvas {
     width: 100%;
     height: 100%;
+    max-width: 100vw;
 }
 
 .hero-content {
     text-align: center;
     max-width: 800px;
     padding: 0 var(--spacing-lg);
+    width: 100%;
+    overflow: hidden;
 }
 
 .hero-title {
@@ -344,12 +373,16 @@ body {
 .services {
     padding: var(--spacing-3xl) 0;
     background: var(--darker-bg);
+    overflow: hidden;
+    width: 100%;
 }
 
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: var(--spacing-xl);
+    width: 100%;
+    max-width: 100%;
 }
 
 .service-card {
@@ -960,17 +993,49 @@ body {
     z-index: 1000;
     transition: all var(--transition-normal);
     animation: pulse 2s infinite;
+    visibility: visible;
+    opacity: 1;
 }
 
 .whatsapp-float:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+    color: white;
+    text-decoration: none;
 }
 
 @keyframes pulse {
     0% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
     50% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.8); }
     100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+}
+
+/* Mobile responsive for WhatsApp button */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+        font-size: 26px;
+        z-index: 1000;
+        visibility: visible !important;
+        opacity: 1 !important;
+        display: flex !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        bottom: 15px;
+        right: 15px;
+        visibility: visible !important;
+        opacity: 1 !important;
+        display: flex !important;
+    }
 }
 
 /* Animations AOS */
@@ -1019,6 +1084,7 @@ body {
 @media (max-width: 1024px) {
     .container {
         padding: 0 var(--spacing-md);
+        max-width: 100%;
     }
     
     .hero-title {
@@ -1041,6 +1107,26 @@ body {
 }
 
 @media (max-width: 768px) {
+    /* Prevent horizontal overflow */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-sm);
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
+    /* Navigation fixes */
+    .nav-container {
+        padding: var(--spacing-md) var(--spacing-sm);
+        width: 100%;
+        max-width: 100%;
+    }
+    
     .nav-menu {
         position: fixed;
         top: 70px;
@@ -1054,6 +1140,8 @@ body {
         align-items: center;
         padding-top: var(--spacing-3xl);
         transition: left var(--transition-normal);
+        z-index: 999;
+        overflow-y: auto;
     }
     
     .nav-menu.active {
@@ -1062,6 +1150,8 @@ body {
     
     .hamburger {
         display: flex;
+        z-index: 1001;
+        position: relative;
     }
     
     .hamburger.active span:nth-child(1) {
@@ -1076,47 +1166,156 @@ body {
         transform: rotate(-45deg) translate(7px, -6px);
     }
     
+    /* Hero section fixes */
+    .hero {
+        width: 100%;
+        max-width: 100vw;
+        overflow: hidden;
+    }
+    
+    .hero-content {
+        padding: 0 var(--spacing-sm);
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
     .hero-title {
         font-size: var(--font-size-3xl);
+        word-wrap: break-word;
+        hyphens: auto;
     }
     
     .hero-subtitle {
         font-size: var(--font-size-lg);
+        word-wrap: break-word;
     }
     
     .hero-buttons {
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+    
+    /* Services grid fixes */
+    .services {
+        overflow: hidden;
+        width: 100%;
     }
     
     .services-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .service-card {
+        max-width: 100%;
+        overflow: hidden;
+        margin: 0;
+    }
+    
+    /* Portfolio fixes */
+    .portfolio {
+        overflow: hidden;
+        width: 100%;
     }
     
     .portfolio-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .portfolio-item {
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
+    /* About section fixes */
+    .about {
+        overflow: hidden;
+        width: 100%;
     }
     
     .about-stats {
         grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
     }
     
     .about-values {
         grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
     }
     
+    /* Contact section fixes */
+    .contact {
+        overflow: hidden;
+        width: 100%;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    /* Footer fixes */
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: var(--spacing-xl);
     }
     
     .testimonial-author {
         flex-direction: column;
         text-align: center;
+        gap: var(--spacing-md);
+    }
+    
+    /* WhatsApp button fixes */
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+        font-size: 26px;
+        z-index: 1000;
+    }
+    
+    /* Ensure all sections don't overflow */
+    section {
+        overflow: hidden;
+        width: 100%;
+        max-width: 100vw;
+    }
+    
+    /* Fix text overflow */
+    h1, h2, h3, h4, h5, h6, p {
+        word-wrap: break-word;
+        hyphens: auto;
+        max-width: 100%;
+    }
+    
+    /* Fix images */
+    img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 var(--spacing-xs);
+    }
+    
     .hero-title {
         font-size: var(--font-size-2xl);
     }
@@ -1134,8 +1333,23 @@ body {
         width: 50px;
         height: 50px;
         font-size: 24px;
-        bottom: 20px;
-        right: 20px;
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .hero-buttons {
+        gap: var(--spacing-md);
+    }
+    
+    .btn {
+        padding: var(--spacing-sm) var(--spacing-lg);
+        font-size: var(--font-size-sm);
+    }
+    
+    /* Ensure very small screens don't overflow */
+    * {
+        max-width: 100%;
+        word-wrap: break-word;
     }
 }
 /* Fallback pour les icônes si Font Awesome ne se charge pas */

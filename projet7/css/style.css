@@ -125,6 +125,8 @@ body {
     cursor: pointer;
     z-index: 1002;
     position: relative;
+    right: 0;
+    visibility: visible;
 }
 
 .hamburger span {
@@ -146,6 +148,18 @@ body {
 
 .hamburger.active span:last-child {
     transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Ensure hamburger is visible on mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        z-index: 1002;
+        position: relative;
+        right: 0;
+    }
 }
 
 /* Hero Section */
@@ -236,6 +250,8 @@ body {
 
 .hero-text {
     color: white;
+    z-index: 10;
+    position: relative;
 }
 
 .hero-title {
@@ -243,6 +259,10 @@ body {
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    position: relative;
 }
 
 .title-line {
@@ -261,6 +281,10 @@ body {
     margin-bottom: 2rem;
     opacity: 0.9;
     line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    position: relative;
 }
 
 .hero-buttons {
@@ -745,12 +769,29 @@ body {
         padding-top: 6rem;
         max-width: 100%;
         overflow: hidden;
+        z-index: 10;
+        position: relative;
     }
     
     .hero-title {
         font-size: 2.5rem;
         word-wrap: break-word;
         hyphens: auto;
+        color: white !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+        z-index: 10;
+        position: relative;
+    }
+    
+    .hero-description {
+        color: rgba(255, 255, 255, 0.9) !important;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+        z-index: 10;
+        position: relative;
     }
     
     .services-grid {
@@ -3250,6 +3291,8 @@ html {
         right: 1rem;
         width: 45px;
         height: 45px;
+        z-index: 999;
+        position: fixed;
     }
     
     .scroll-to-top .francky-icon svg {
@@ -3262,11 +3305,21 @@ html {
         left: 1rem;
         width: 55px;
         height: 55px;
+        z-index: 999;
+        position: fixed;
     }
     
     .whatsapp-btn .francky-icon svg {
         width: 26px;
         height: 26px;
+    }
+    
+    /* Ensure buttons are visible and not hidden */
+    .scroll-to-top,
+    .whatsapp-btn {
+        visibility: visible !important;
+        opacity: 1 !important;
+        display: flex !important;
     }
 }
 
@@ -3276,6 +3329,8 @@ html {
         right: 0.5rem;
         width: 40px;
         height: 40px;
+        z-index: 999;
+        position: fixed;
     }
     
     .scroll-to-top .francky-icon svg {
@@ -3288,11 +3343,21 @@ html {
         left: 0.5rem;
         width: 50px;
         height: 50px;
+        z-index: 999;
+        position: fixed;
     }
     
     .whatsapp-btn .francky-icon svg {
         width: 24px;
         height: 24px;
+    }
+    
+    /* Ensure buttons are always visible on small screens */
+    .scroll-to-top,
+    .whatsapp-btn {
+        visibility: visible !important;
+        opacity: 1 !important;
+        display: flex !important;
     }
 }
 
