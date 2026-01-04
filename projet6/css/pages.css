@@ -580,6 +580,39 @@
         gap: 1.5rem;
     }
     
+    /* Fix footer links on mobile */
+    .footer-section p {
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-section a {
+        display: inline-block;
+        padding: 0.2rem 0;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .footer-section a:hover {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 0.2rem 0.5rem;
+    }
+    
+    .footer-bottom {
+        padding-top: 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .footer-bottom a {
+        font-weight: 500;
+        padding: 0.2rem 0.3rem;
+        border-radius: 4px;
+        margin: 0 0.2rem;
+    }
+    
+    .footer-bottom a:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+    
     /* Fix card overflow */
     .service-card,
     .team-card,
