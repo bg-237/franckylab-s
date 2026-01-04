@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labo de Francky - Librairie de Composants</title>
+    <link rel="stylesheet" href="css/francky-lib.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <!-- Styles spécifiques aux composants -->
+    <link rel="stylesheet" href="components/buttons/buttons.css">
+    <link rel="stylesheet" href="components/navigation/navigation.css">
+    <link rel="stylesheet" href="components/forms/forms.css">
+    <link rel="stylesheet" href="components/animations/animations.css">
+    <link rel="stylesheet" href="components/effects/effects.css">
+    <link rel="stylesheet" href="components/layouts/layouts.css">
+    <link rel="stylesheet" href="components/loaders/loaders.css">
+</head>
+<body>
+    <div class="lab-container">
+        <!-- Navigation principale -->
+        <nav class="lab-nav">
+            <div class="lab-logo">
+                <h1>🧪 Labo de Francky</h1>
+                <p class="lab-subtitle">Librairie de composants CSS</p>
+            </div>
+            <div class="lab-menu">
+                <button class="nav-btn active" data-category="buttons">🔘 Boutons</button>
+                <button class="nav-btn" data-category="navigation">🧭 Navigation</button>
+                <button class="nav-btn" data-category="animations">✨ Animations</button>
+                <button class="nav-btn" data-category="effects">🎭 Effets 3D</button>
+                <button class="nav-btn" data-category="forms">📝 Formulaires</button>
+                <button class="nav-btn" data-category="layouts">📐 Layouts</button>
+                <button class="nav-btn" data-category="loaders">⏳ Chargement</button>
+            </div>
+        </nav>
+
+        <!-- Zone de contenu principal -->
+        <main class="lab-content">
+            <div class="lab-header">
+                <h2 id="category-title">Boutons</h2>
+                <p id="category-description">Collection complète de boutons avec styles, couleurs et animations</p>
+                <div class="lab-stats">
+                    <span class="stat-badge" id="component-count">13 composants</span>
+                    <span class="stat-badge">Modulaire</span>
+                    <span class="stat-badge">Responsive</span>
+                </div>
+            </div>
+
+            <!-- Zone de démonstration -->
+            <div class="demo-grid" id="demo-container">
+                <!-- Les composants seront chargés ici -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/demo.js"></script>
+    <script src="components/buttons/buttons.js"></script>
+    <script src="components/navigation/navigation.js"></script>
+    <script src="components/forms/forms.js"></script>
+    <script src="components/animations/animations.js"></script>
+    <script src="components/effects/effects.js"></script>
+    <script src="components/layouts/layouts.js"></script>
+    <script src="components/loaders/loaders.js"></script>
+</body>
+</html>

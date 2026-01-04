@@ -1,0 +1,572 @@
+/* ===== EFFETS 3D - LABO DE FRANCKY ===== */
+
+/* ===== CARTES 3D ===== */
+.cards-3d-showcase {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.card-3d {
+    width: 200px;
+    height: 120px;
+    perspective: 1000px;
+}
+
+.card-3d-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card-3d:hover .card-3d-inner {
+    transform: rotateY(180deg);
+}
+
+.card-3d-front,
+.card-3d-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.card-3d-front {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+}
+
+.card-3d-back {
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.card-tilt {
+    width: 200px;
+    height: 120px;
+    background: linear-gradient(135deg, var(--success), var(--teal));
+    color: white;
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.card-tilt:hover {
+    transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
+}
+
+.card-float {
+    width: 200px;
+    height: 120px;
+    background: linear-gradient(135deg, var(--orange), var(--red));
+    color: white;
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    animation: float3d 3s ease-in-out infinite;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes float3d {
+    0%, 100% {
+        transform: translateY(0) rotateX(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotateX(5deg);
+    }
+}
+
+/* ===== BOUTONS 3D AVANCÉS ===== */
+.buttons-3d-showcase {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-3d-advanced {
+    padding: 1rem 2rem;
+    background: linear-gradient(145deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: 600;
+    position: relative;
+    transform: perspective(1000px) rotateX(15deg);
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 10px 20px rgba(102, 126, 234, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-3d-advanced:hover {
+    transform: perspective(1000px) rotateX(0deg) translateY(-5px);
+    box-shadow: 
+        0 15px 30px rgba(102, 126, 234, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.btn-3d-glass {
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-md);
+    color: var(--primary);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.btn-3d-glass:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.btn-3d-neon {
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 2px solid var(--primary);
+    border-radius: var(--radius-md);
+    color: var(--primary);
+    cursor: pointer;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    text-shadow: 0 0 10px var(--primary);
+    box-shadow: 
+        0 0 20px rgba(99, 102, 241, 0.3),
+        inset 0 0 20px rgba(99, 102, 241, 0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-3d-neon:hover {
+    box-shadow: 
+        0 0 30px rgba(99, 102, 241, 0.6),
+        inset 0 0 30px rgba(99, 102, 241, 0.2);
+    text-shadow: 0 0 20px var(--primary);
+}
+
+.btn-3d-hologram {
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, transparent 30%, rgba(99, 102, 241, 0.1) 50%, transparent 70%);
+    background-size: 200% 200%;
+    border: 1px solid var(--primary);
+    border-radius: var(--radius-md);
+    color: var(--primary);
+    cursor: pointer;
+    font-weight: 600;
+    animation: hologramShimmer 2s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+@keyframes hologramShimmer {
+    0%, 100% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+}
+
+.btn-3d-hologram:hover {
+    animation-duration: 0.5s;
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+}
+
+/* ===== EFFETS DE PARALLAXE ===== */
+.parallax-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    perspective: 1000px;
+}
+
+.parallax-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border-radius: var(--radius-lg);
+    transition: transform 0.6s ease;
+}
+
+.parallax-back {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    transform: translateZ(-100px) scale(1.1);
+}
+
+.parallax-mid {
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.8), rgba(219, 39, 119, 0.8));
+    color: white;
+    transform: translateZ(-50px) scale(1.05);
+}
+
+.parallax-front {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.9), rgba(5, 150, 105, 0.9));
+    color: white;
+    transform: translateZ(0px);
+}
+
+.parallax-container.active .parallax-back {
+    transform: translateZ(-100px) scale(1.1) translateX(-20px);
+}
+
+.parallax-container.active .parallax-mid {
+    transform: translateZ(-50px) scale(1.05) translateX(-10px);
+}
+
+.parallax-container.active .parallax-front {
+    transform: translateZ(0px) translateX(10px);
+}
+
+/* ===== TRANSFORMATIONS 3D ===== */
+.transform-3d-showcase {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.cube-3d {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    animation: rotateCube 6s infinite linear;
+}
+
+@keyframes rotateCube {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+.cube-face {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(99, 102, 241, 0.8);
+    border: 2px solid var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.cube-front { transform: rotateY(0deg) translateZ(50px); }
+.cube-back { transform: rotateY(180deg) translateZ(50px); }
+.cube-right { transform: rotateY(90deg) translateZ(50px); }
+.cube-left { transform: rotateY(-90deg) translateZ(50px); }
+.cube-top { transform: rotateX(90deg) translateZ(50px); }
+.cube-bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+.pyramid-3d {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    animation: rotatePyramid 4s infinite ease-in-out;
+}
+
+@keyframes rotatePyramid {
+    0%, 100% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    50% {
+        transform: rotateX(180deg) rotateY(180deg);
+    }
+}
+
+.pyramid-face {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.pyramid-front {
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 87px solid rgba(236, 72, 153, 0.8);
+    transform: translateZ(29px);
+}
+
+.pyramid-right {
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 87px solid rgba(219, 39, 119, 0.8);
+    transform: rotateY(90deg) translateZ(29px);
+}
+
+.pyramid-back {
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 87px solid rgba(236, 72, 153, 0.6);
+    transform: rotateY(180deg) translateZ(29px);
+}
+
+.pyramid-left {
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 87px solid rgba(219, 39, 119, 0.6);
+    transform: rotateY(-90deg) translateZ(29px);
+}
+
+/* ===== EFFETS DE PROFONDEUR ===== */
+.depth-effects-showcase {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.depth-card {
+    width: 120px;
+    height: 80px;
+    background: white;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--primary);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.depth-level-1 {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.depth-level-2 {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.depth-level-3 {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.depth-level-4 {
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+
+.depth-level-5 {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+.depth-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== EFFETS DE MORPHING ===== */
+.morphing-showcase {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.morph-shape {
+    width: 80px;
+    height: 80px;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.morph-circle {
+    border-radius: 50%;
+}
+
+.morph-circle:hover {
+    border-radius: var(--radius-md);
+    transform: scale(1.1) rotate(45deg);
+}
+
+.morph-square {
+    border-radius: var(--radius-md);
+}
+
+.morph-square:hover {
+    border-radius: 50%;
+    transform: scale(1.1) rotate(90deg);
+}
+
+.morph-triangle {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    border-radius: 0;
+}
+
+.morph-triangle:hover {
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    transform: scale(1.1) rotate(180deg);
+}
+
+.morph-hexagon {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
+}
+
+.morph-hexagon:hover {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transform: scale(1.1) rotate(60deg);
+}
+
+/* ===== PARTICULES 3D ===== */
+.particles-3d-container {
+    text-align: center;
+}
+
+.particles-3d {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 0 auto 1rem;
+    perspective: 1000px;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, #1e293b, #334155);
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--primary);
+    border-radius: 50%;
+    opacity: 0;
+    transform-style: preserve-3d;
+}
+
+.particles-3d.active .particle {
+    animation: particleFloat3d 3s ease-in-out infinite;
+}
+
+.particle:nth-child(1) { animation-delay: 0s; }
+.particle:nth-child(2) { animation-delay: 0.2s; }
+.particle:nth-child(3) { animation-delay: 0.4s; }
+.particle:nth-child(4) { animation-delay: 0.6s; }
+.particle:nth-child(5) { animation-delay: 0.8s; }
+.particle:nth-child(6) { animation-delay: 1s; }
+.particle:nth-child(7) { animation-delay: 1.2s; }
+.particle:nth-child(8) { animation-delay: 1.4s; }
+
+@keyframes particleFloat3d {
+    0% {
+        opacity: 0;
+        transform: translate3d(150px, 100px, 0) scale(0);
+    }
+    10% {
+        opacity: 1;
+        transform: translate3d(150px, 100px, 0) scale(1);
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(
+            calc(150px + var(--random-x, 0) * 200px),
+            calc(100px + var(--random-y, 0) * 150px),
+            calc(var(--random-z, 0) * 100px)
+        ) scale(0);
+    }
+}
+
+/* ===== EFFETS DE RÉFLEXION ===== */
+.reflection-showcase {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.reflection-card {
+    position: relative;
+    width: 200px;
+}
+
+.reflection-content {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
+
+.reflection-mirror {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: var(--radius-lg);
+    transform: scaleY(-1);
+    opacity: 0.3;
+    mask: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    -webkit-mask: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+}
+
+.glass-effect {
+    width: 200px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    color: var(--primary);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.glass-effect:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}

@@ -1,0 +1,281 @@
+<!-- ===== FORMULAIRES - LABO DE FRANCKY ===== -->
+
+<!-- Input Classique -->
+<div class="component-card">
+    <h3 class="component-title">Input Classique</h3>
+    <p class="component-description">Champ de saisie avec focus et validation</p>
+    <div class="component-demo">
+        <div class="form-group">
+            <label class="form-label">Nom complet</label>
+            <input type="text" class="form-input" placeholder="Votre nom complet">
+        </div>
+    </div>
+    <div class="component-code">
+        <button class="copy-btn">Copier</button>
+        <pre><code>&lt;div class="form-group"&gt;
+    &lt;label class="form-label"&gt;Nom complet&lt;/label&gt;
+    &lt;input type="text" class="form-input" placeholder="Votre nom complet"&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+
+<!-- Label Flottant -->
+<div class="component-card">
+    <h3 class="component-title">Label Flottant</h3>
+    <p class="component-description">Input avec label qui flotte au focus</p>
+    <div class="component-demo">
+        <div class="floating-label">
+            <input type="email" class="floating-input" placeholder=" " id="email-demo">
+            <label for="email-demo" class="floating-label-text">Adresse email</label>
+        </div>
+    </div>
+    <div class="component-code">
+        <button class="copy-btn">Copier</button>
+        <pre><code>&lt;div class="floating-label"&gt;
+    &lt;input type="email" class="floating-input" placeholder=" " id="email"&gt;
+    &lt;label for="email" class="floating-label-text"&gt;Adresse email&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+
+<!-- Input avec Icône -->
+<div class="component-card">
+    <h3 class="component-title">Input avec Icône</h3>
+    <p class="component-description">Champ avec icône intégrée</p>
+    <div class="component-demo">
+        <div class="input-group">
+            <div class="input-icon">
+                <span class="icon">🔍</span>
+                <input type="text" class="input-with-icon" placeholder="Rechercher...">
+            </div>
+        </div>
+    </div>
+    <div class="component-code">
+        <button class="copy-btn">Copier</button>
+        <pre><code>&lt;div class="input-group"&gt;
+    &lt;div class="input-icon"&gt;
+        &lt;span class="icon"&gt;🔍&lt;/span&gt;
+        &lt;input type="text" class="input-with-icon" placeholder="Rechercher..."&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+
+<!-- Textarea -->
+<div class="component-card">
+    <h3 class="component-title">Zone de Texte</h3>
+    <p class="component-description">Textarea avec redimensionnement automatique</p>
+    <div class="component-demo">
+        <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="form-textarea" placeholder="Votre message..." rows="4"></textarea>
+        </div>
+    </div>
+    <div class="component-code">
+        <button class="copy-btn">Copier</button>
+        <pre><code>&lt;div class="form-group"&gt;
+    &lt;label class="form-label"&gt;Message&lt;/label&gt;
+    &lt;textarea class="form-textarea" placeholder="Votre message..." rows="4"&gt;&lt;/textarea&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+
+<!-- Select Personnalisé -->
+<div class="component-card">
+    <h3 class="component-title">Select Personnalisé</h3>
+    <p class="component-description">Menu déroulant stylisé</p>
+    <div class="component-demo">
+        <div class="form-group">
+            <label class="form-label">Pays</label>
+            <div class="custom-select">
+                <select class="form-select">
+                    <option value="">Choisir un pays</option>
+                    <option value="fr">France</option>
+                    <option value="be">Belgique</option>
+                    <option value="ch">Suisse</option>
+                    <option value="ca">Canada</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="component-code">
+        <button class="copy-btn">Copier</button>
+        <pre><code>&lt;div class="form-group"&gt;
+    &lt;label class="form-label"&gt;Pays&lt;/label&gt;
+    &lt;div class="custom-select"&gt;
+        &lt;select class="form-select"&gt;
+            &lt;option value=""&gt;Choisir un pays&lt;/option&gt;
+            &lt;option value="fr"&gt;France&lt;/option&gt;
+            &lt;option value="be"&gt;Belgique&lt;/option&gt;
+            &lt;option value="ch"&gt;Suisse&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+
+<!-- Checkbox Personnalisé -->
+<div class="component-card">
+    <h3 class="component-title">Checkbox Personnalisé</h3>
+    <p class="component-description">Cases à cocher avec animations</p>
+    <div class="component-demo">
+        <div class="checkbox-group">
+            <label class="custom-checkbox">
+                <input type="checkbox" checked>
+                <span class="checkmark"></span>
+                Option 1 (cochée)
+            </label>
+            <label class="custom-checkbox">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                Option 2
+            </label>
+            <label class="custom-checkbox">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                Option 3
+            </label>
+        </div>
+    </div>
+    <div class="component-code">
+        <button class="copy-btn">Copier</button>
+        <pre><code>&lt;label class="custom-checkbox"&gt;
+    &lt;input type="checkbox"&gt;
+    &lt;span class="checkmark"&gt;&lt;/span&gt;
+    Texte de l'option
+&lt;/label&gt;</code></pre>
+    </div>
+</div>
+
+<!-- Radio Buttons -->
+<div class="component-card">
+    <h3 class="component-title">Boutons Radio</h3>
+    <p class="component-description">Boutons radio stylisés</p>
+    <div class="component-demo">
+        <div class="radio-group">
+            <label class="custom-radio">
+                <input type="radio" name="demo-radio" value="option1" checked>
+                <span class="radio-mark"></span>
+                Option 1
+            </label>
+            <label class="custom-radio">
+                <input type="radio" name="demo-radio" value="option2">
+                <span class="radio-mark"></span>
+                Option 2
+            </label>
+            <label class="custom-radio">
+                <input type="radio" name="demo-radio" value="option3">
+                <span class="radio-mark"></span>
+                Option 3
+            </label>
+        </div>
+    </div>
+    <div class="component-code">
+        <button class="copy-btn">Copier</button>
+        <pre><code>&lt;label class="custom-radio"&gt;
+    &lt;input type="radio" name="radio-group" value="option1"&gt;
+    &lt;span class="radio-mark"&gt;&lt;/span&gt;
+    Option 1
+&lt;/label&gt;</code></pre>
+    </div>
+</div>
+
+<!-- Toggle Switch -->
+<div class="component-card">
+    <h3 class="component-title">Interrupteur Toggle</h3>
+    <p class="component-description">Interrupteur on/off animé</p>
+    <div class="component-demo">
+        <div class="toggle-group">
+            <label class="toggle-switch">
+                <input type="checkbox" checked>
+                <span class="toggle-slider"></span>
+                Notifications activées
+            </label>
+            <label class="toggle-switch">
+                <input type="checkbox">
+                <span class="toggle-slider"></span>
+                Mode sombre
+            </label>
+        </div>
+    </div>
+    <div class="component-code">
+        <button class="copy-btn">Copier</button>
+        <pre><code>&lt;label class="toggle-switch"&gt;
+    &lt;input type="checkbox"&gt;
+    &lt;span class="toggle-slider"&gt;&lt;/span&gt;
+    Texte de l'option
+&lt;/label&gt;</code></pre>
+    </div>
+</div>
+
+<!-- Range Slider -->
+<div class="component-card">
+    <h3 class="component-title">Curseur Range</h3>
+    <p class="component-description">Curseur de valeur personnalisé</p>
+    <div class="component-demo">
+        <div class="form-group">
+            <label class="form-label">Volume: <span id="volume-value">50</span>%</label>
+            <input type="range" class="custom-range" min="0" max="100" value="50" id="volume-slider">
+        </div>
+    </div>
+    <div class="component-code">
+        <button class="copy-btn">Copier</button>
+        <pre><code>&lt;div class="form-group"&gt;
+    &lt;label class="form-label"&gt;Volume: &lt;span id="volume-value"&gt;50&lt;/span&gt;%&lt;/label&gt;
+    &lt;input type="range" class="custom-range" min="0" max="100" value="50"&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+
+<!-- Formulaire Complet -->
+<div class="component-card">
+    <h3 class="component-title">Formulaire Complet</h3>
+    <p class="component-description">Exemple de formulaire avec validation</p>
+    <div class="component-demo">
+        <form class="demo-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">Prénom</label>
+                    <input type="text" class="form-input" placeholder="Votre prénom" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Nom</label>
+                    <input type="text" class="form-input" placeholder="Votre nom" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-input" placeholder="votre@email.com" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Message</label>
+                <textarea class="form-textarea" placeholder="Votre message..." rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label class="custom-checkbox">
+                    <input type="checkbox" required>
+                    <span class="checkmark"></span>
+                    J'accepte les conditions d'utilisation
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Envoyer le message</button>
+        </form>
+    </div>
+    <div class="component-code">
+        <button class="copy-btn">Copier</button>
+        <pre><code>&lt;form class="demo-form"&gt;
+    &lt;div class="form-row"&gt;
+        &lt;div class="form-group"&gt;
+            &lt;label class="form-label"&gt;Prénom&lt;/label&gt;
+            &lt;input type="text" class="form-input" placeholder="Votre prénom" required&gt;
+        &lt;/div&gt;
+        &lt;div class="form-group"&gt;
+            &lt;label class="form-label"&gt;Nom&lt;/label&gt;
+            &lt;input type="text" class="form-input" placeholder="Votre nom" required&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- Autres champs... --&gt;
+    &lt;button type="submit" class="btn btn-primary"&gt;Envoyer&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+    </div>
+</div>
